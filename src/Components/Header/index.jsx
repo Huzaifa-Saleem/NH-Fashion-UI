@@ -1,7 +1,7 @@
 import React from 'react'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Navbar from '../Navbar/index';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom'
 import Home from '../../Routes/Home';
 import "../Header/header.css"
 const Header = () => {
