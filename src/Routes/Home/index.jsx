@@ -5,8 +5,7 @@ import Header from '../../Components/Header/index'
 const Home = () => {
   return (
     <div>
-      <Header/>
-      {/* <Footer/> */}
+      Home
     </div>
   )
 }
