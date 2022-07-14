@@ -1,0 +1,18 @@
+.navbar{
+   display: flex;
+}
+.nav-logo{
+  flex: 33.33%;
+}
+.nav-links{
+    flex: 33.33%;
+}
+.nav-icons{
+    flex: 33.33%;
+}
+.nav-links ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}

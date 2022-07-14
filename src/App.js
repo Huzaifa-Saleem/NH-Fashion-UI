@@ -1,9 +1,14 @@
+import React from 'react'
+import Home from './Routes/Home/index'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+const App = () => {
   return (
-    <>
-    </>
-  );
+    <div>
+       <Home/>
+    </div>
+  )
 }
 
-export default App;
+export default App
+
