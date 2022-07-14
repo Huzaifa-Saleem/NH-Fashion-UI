@@ -3,7 +3,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Navbar from '../Navbar/index';
 import { Link, NavLink } from 'react-router-dom'
 import Home from '../../Routes/Home';
-import "../Header/header.css"
+import "../Header/header.scss"
 const Header = () => {
   return (
     <div>
@@ -14,8 +14,8 @@ const Header = () => {
       </div>
       <div className='nav-link'>
         <ul>
-            <li>LOG IN</li>
-            <li>SIGN UP</li>
+            <li><Link to='/login'>LOG IN</Link></li>
+            <li><Link to='/register'>SIGN UP</Link></li>
         </ul>
       </div>
       </div>

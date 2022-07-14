@@ -4,17 +4,18 @@ import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Badge from '@mui/material/Badge';
+import {Link} from 'react-router-dom'
 const Navbar = () => {
   return (
     <div className='navbar container'>
       <div className='nav-logo'>
-        <img src="download.webp" alt="" />
+        <img className='logo-img' src="/images/logo.svg" alt="" />
       </div>
       <div className='nav-links'>
         <ul>
-            <li>Home</li>
-            <li>Products</li>
-            <li>Contact</li>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/'>Products</Link></li>
+            <li><Link to='/'>Contact</Link></li>
         </ul>
       </div>
       <div className='nav-icons'>

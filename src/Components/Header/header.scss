@@ -1,9 +1,9 @@
 .head{
-    background-color: rgb(14, 13, 13);
+    background-color: #111111;
 }
 .header{
     display: flex;
-    font-family: 'Roboto', sans-serif;
+    
     margin-top: 0px;
     padding: 10px 0px;
  }
@@ -34,7 +34,17 @@
     margin: 0;
     padding:0 15px;
     display: inline;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
     letter-spacing: 2px;
+
+    a{
+      text-decoration: none;
+      color: white;
+      transition: .3s all ease;
+
+      &:hover{
+         color: rgb(255, 56, 56);
+      }
+    }
 }

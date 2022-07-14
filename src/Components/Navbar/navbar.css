@@ -1,6 +1,6 @@
 .navbar{
    display: flex;
-   font-family: 'Roboto', sans-serif;
+
    margin-top: 30px;
    margin-bottom: 30px;
    padding: 0px;
@@ -9,8 +9,15 @@
 .nav-logo{
   flex: 33.33%;
 }
+.logo-img{
+    width: 200px;
+}
 .nav-links{
     flex: 33.33%;
+}
+.nav-links ul li a{
+    text-decoration: none;
+     color: #111111;    
 }
 .nav-icons{
     flex: 33.33%;
@@ -27,8 +34,9 @@
     margin:0px 30px;
     padding: 0px 5px;
     display: inline;
-    font-size: 21px;
-    font-weight: 400;
+    font-size: 16px;
+    color: #111111;
+    font-weight: 600;
 }
 .nav-links li{
     position: relative;
