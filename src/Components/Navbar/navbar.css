@@ -1,5 +1,10 @@
 .navbar{
    display: flex;
+   font-family: 'Roboto', sans-serif;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   padding: 0px;
+   position: sticky;
 }
 .nav-logo{
   flex: 33.33%;
@@ -10,9 +15,48 @@
 .nav-icons{
     flex: 33.33%;
 }
+.nav-links ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 .nav-links ul li{
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    margin:0px 35px;
+    padding: 0px 5px;
     display: inline;
+    font-size: 21px;
+    font-weight: 400;
+}
+.nav-links li{
+    position: relative;
+}
+.nav-links li::after{
+    content: " ";
+    background-color: rgb(204, 28, 28);
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    left: 0;
+    transition: all .5s ease;
+    bottom: -6px;
+}
+.nav-links li:hover::after{
+    width: 100%;
+}
+.nav-icons ul{
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: end;
+}
+.nav-icons ul li{
+    list-style-type: none;
+    margin: 0;
+    padding:0 15px;
+    display: inline;
+    font-size: 20px;
+    font-weight: 400;
 }

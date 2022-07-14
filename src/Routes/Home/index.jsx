@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from '../../Components/Navbar/index'
+import Header from '../../Components/Header/index'
 
 const Home = () => {
   return (
     <div>
-      <Navbar/>
+      <Header/>
     </div>
   )
 }
