@@ -1,0 +1,241 @@
+@import '../../Themes/Colors.scss';
+
+.navbar{
+   display: grid;
+   grid-template-columns: 1fr 2fr 2fr;
+   font-family: 'Roboto', sans-serif;
+   margin: 30px 150px;
+   padding: 0px;
+   position: sticky;
+
+button{
+    display: none;
+}
+
+.hamburger{
+    position: relative;
+    margin-left: 90px;
+}
+
+.nav-logo{
+    position: relative;
+
+    img{
+        width: 196px;
+        height: auto;
+    }
+}
+.nav-link{
+    width: 250px;
+    padding: 50px 0px;
+    position: absolute;  
+    top: -32px;
+    background-color:$dark-grey;
+    align-items: center;
+    transition: all 4s linear;
+    transform-origin: left;
+
+    .link{
+        color: $white;
+    }
+
+    ul li{
+        display: block;
+        text-align: left;
+    }
+    
+}
+  .nav-links{
+
+    .link{
+        text-decoration: none;
+        color: $black;
+    }
+
+    ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        li{
+            position: relative;
+            list-style-type: none;
+            margin: 0;
+            margin:0px 25px;
+            padding: 0px 5px;
+            display: inline;
+            font-size: 21px;
+            font-weight: 400;
+            align-items: end;
+
+            &::after{
+                content: " ";
+                background-color: $pink;
+                position: absolute;
+                height: 2px;
+                width: 0%;
+                left: 0;
+                transition: all .5s ease;
+                bottom: -6px;
+            }
+            &:hover::after{
+                width: 100%;
+            }
+        }
+    }
+    .active::after{
+        content: " ";
+        background-color: $pink;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        left: 0;
+        transition: all .5s ease;
+        bottom: -6px;
+    }
+  }
+  .nav-icons{
+
+    ul{
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: end;
+
+        li{
+            list-style-type: none;
+            margin: 0;
+            padding:0 15px;
+            display: inline;
+            font-size: 20px;
+            font-weight: 400;
+            
+            input[type=text]{
+                outline: none;
+                width: 200px;
+                border: none;
+                border-bottom: 1px solid grey;
+
+                &:focus{
+                    outline: none;
+                    border-bottom: 1px solid $pink;
+                    box-shadow: 0 1px 0 0 $pink;
+                }
+            }
+            span{
+                margin: 0px 10px;
+            }
+        }
+    }
+  }
+
+}
+
+// @media (min-width: 1200px) and (max-width: 1350px){
+
+//     .navbar .nav-links ul li{
+//         margin:0px 18px;
+//     }
+//     .navbar .nav-icons ul li{
+//     padding: 0px 8px;
+//     }
+// }
+
+@media (min-width: 1050px) and (max-width: 1350px) {
+
+    .navbar{
+        margin: 30px 100px;
+    }
+    .navbar .nav-links ul li{
+        margin:0px 15px;
+    }
+    .navbar .nav-icons ul li{
+    padding: 0px 5px;
+    }
+    .navbar .nav-icons ul li input[type=text]{
+    width: 150px;
+    }
+
+}
+
+@media (min-width: 1050px) and (max-width: 1150px) {
+
+    .navbar .nav-links ul li{
+        margin:0px 10px;
+    }
+
+}
+
+@media (max-width: 1050px) {
+
+    .navbar{
+        margin: 30px 50px;
+        display: grid;
+        grid-template-areas: 
+            "header header header header header header"
+            "main main main right right right"
+            ;
+        
+    
+        button{
+            display: block;
+            background: none;
+            border: none;
+        }
+    }
+    .navbar .nav-logo{
+        text-align: center;
+        grid-area: header;
+    }
+    .navbar .nav-links{  
+        display: none;
+        grid-area: main;
+    }
+    .navbar .hamburger{
+        margin-top: 20px;
+    }
+    .navbar .nav-icons {
+        grid-area: right;
+        margin-top: 20px;
+        }
+    .navbar .nav-icons ul li{
+        padding: 0px 3px;
+        }
+    .navbar .nav-icons ul{
+        margin-right: 90px;
+        }
+    .navbar .nav-icons ul li input[type=text]{
+            width: 150px;
+    }
+        
+}
+@media (max-width: 768px) {
+
+    .navbar{
+        margin: 30px 0px;
+
+        .hamburger{
+            margin-left: 50px;
+        }
+    }
+    .navbar .nav-icons ul{
+        margin-right: 50px;
+        }
+// .navbar .nav-icons ul li{
+//     padding: 0px 3px;
+// }
+        
+}
+
+@media (max-width: 550px){
+    .navbar .nav-icons ul li input[type=text]{
+        width: 150px;
+    }
+    .navbar.hamburger{
+        margin-left: 30px;
+    }
+    .navbar .nav-icons ul{
+    margin-right: 30px;
+    }
+}
