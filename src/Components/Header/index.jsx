@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../Navbar/index';
 import { NavLink } from 'react-router-dom'
 import "../Header/header.scss"
 const Header = () => {
@@ -13,15 +12,15 @@ const Header = () => {
       </div>
       <div className='nav-link'>
         <ul>
-            <li><NavLink to='/' className='link'>LOG IN</NavLink></li>
+            <li><NavLink to='/logIn' className='link'>LOG IN</NavLink></li>
             <span></span>
-            <li><NavLink to='/' className='link'>SIGN UP</NavLink></li>
+            <li><NavLink to='/signUp' className='link'>SIGN UP</NavLink></li>
         </ul>
       </div>
       </div>
       </div>
-      </div>
-      <Navbar/>
+      
+    </div>
     </div>
   )
 }
