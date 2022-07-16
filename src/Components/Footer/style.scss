@@ -1,3 +1,5 @@
+@import '../../Themes/Colors.scss';
+
 footer{
     background: #111111;
 
@@ -14,25 +16,73 @@ footer{
     }
 
     h4{
-        margin: 4rem 1.5rem 2rem 2rem;
+        margin: 4rem 1.5rem 0rem 3rem;
         color: white;
-        font-weight: bold;
+        // font-weight: ;
+        font-size: 18px;
     }
     li{
         list-style: none;
-        margin: .5rem 3rem;        
+        margin: .5rem 3rem; 
+           
     }
     a{
         text-decoration: none;
         color: #a4a4a4;
     
-
+        position: relative;
+        &::after{
+            content: " ";
+            background-color: $pink;
+            position: absolute;
+            height: 2px;
+            width: 0%;
+            left: 0;
+            transition: all .5s ease;
+            bottom: -6px;
+        }
+        &:hover::after{
+            width:100%;
+            
+        }   
         &:hover{
-            color: white;
-            border-bottom: 1px solid rgb(238, 103, 103);
-            transition: .4s all ease;
-            padding-bottom: 4px ;
+            color: whitesmoke;
+        }
+        
+    }
+    .newsletter{
+        margin-left: 0;
 
+    }
+    p{
+        max-width: 300px;
+    }
+    input{
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: rgb(189, 189, 189) 1.5px solid;
+        width: 130%;
+        padding-bottom: 5px;
+        &::placeholder{
+            color: #c8c8c8;
+        }
+        &:focus{
+            color: white;
+        }
+
+    }
+    .icon{
+        color: #c8c8c8;
+    }
+    hr{
+        color: white;
+    }
+    .copyright{
+        display: flex;
+        justify-content: center;
+        p{
+            margin: 0 5px 15px 0px;
         }
     }
 }
