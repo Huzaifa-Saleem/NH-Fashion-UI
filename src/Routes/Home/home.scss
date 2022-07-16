@@ -15,8 +15,9 @@ body{
         top: 200px;
         position: absolute;
         left: 200px;
-        animation: textup 3s linear infinite;
-        transform: translateY(100px);
+        animation: textup 8s linear ;
+
+        transform: translateY(50px);
 
         @keyframes textup{
             10%{

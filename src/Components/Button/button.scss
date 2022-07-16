@@ -1,15 +1,16 @@
 @import "../../Themes/Colors.scss";
-.btn{
+.btn11{
     padding: 0px;
     margin-top: 25px;
-    a{
+    &{
         color: $white;
         background-color: $black;
-        padding: 17px 27px;
+        padding: 12px 22px;
         font-size: 14px;
         font-weight: 500;
         text-decoration: none;
         letter-spacing: 2px;
+        border: none;
 
         span{
             margin: 2px;

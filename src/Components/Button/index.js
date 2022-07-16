@@ -5,11 +5,11 @@ import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined
 
 const Button = (props) => {
   return (
-    <div className='btn'>
-       <Link to={props.link}>
+    <button className='btn11'>
+       
            {props.title} <span></span> <ArrowRightAltOutlinedIcon sx={{ fontSize: 30, color:'white',marginTop:-0.5}}/>
-       </Link>
-    </div>
+       
+    </button>
   )
 }
 
