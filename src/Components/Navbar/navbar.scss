@@ -4,7 +4,7 @@
    display: grid;
    grid-template-columns: 1fr 2fr 2fr;
    font-family: 'Roboto', sans-serif;
-   margin: 30px 150px;
+   margin: 30px 200px;
    padding: 0px;
    position: sticky;
 
@@ -65,8 +65,8 @@ button{
             margin:0px 25px;
             padding: 0px 5px;
             display: inline;
-            font-size: 21px;
-            font-weight: 400;
+            font-size: 19px;
+            font-weight: 500;
             align-items: end;
 
             &::after{

@@ -1,0 +1,62 @@
+@import "../../Themes/Colors.scss";
+
+body{
+    overflow-x: hidden;
+}
+
+.slider{
+    background-image: url("../../../public/images/slider.jpg");
+    height: 796px;
+    max-width: 100%;
+    position: relative;
+
+    .slider-content{
+
+        top: 200px;
+        position: absolute;
+        left: 200px;
+        animation: textup 3s linear infinite;
+        transform: translateY(100px);
+
+        @keyframes textup{
+            10%{
+                transform: translateY(0px);
+            }
+            100%{
+              transform: translateY(0px);
+          }
+        }
+
+        h5{
+            color: $pink;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        h1{
+            color: $black;
+            font-size: 46px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        p{
+            color: grey;
+            font-size: 16px;
+        }
+
+        .icons{
+            margin-top: 220px;
+            ul{
+                display: flex;
+                padding: 0px;
+                align-items: start;
+
+                li{
+                    list-style-type: none;
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+
+}

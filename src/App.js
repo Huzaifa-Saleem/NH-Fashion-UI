@@ -16,7 +16,7 @@ const App = () => {
       <Router>
         <Header/>
         <Navbar/>
-        <Footer/>
+        
         <Routes>
           <Route exact path="/home" element={<Home />} />
           {/* <Route exact path="/logIn" element={<LogIn />} /> */}
@@ -25,7 +25,9 @@ const App = () => {
           <Route exact path="/products" element={<Products/>} />
           <Route exact path="/contact" element={<Contact/>} />
       </Routes>
+      <Footer/>
       </Router>
+
     
   );
 };

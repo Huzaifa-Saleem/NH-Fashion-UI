@@ -1,5 +1,6 @@
 @import '../../Themes/Colors.scss';
 
+
 footer{
     background: #111111;
 
@@ -85,4 +86,12 @@ footer{
             margin: 0 5px 15px 0px;
         }
     }
+}
+
+@media (max-width: 768px) {
+
+footer input{
+    width: 100%;
+}
+        
 }

@@ -6,14 +6,14 @@
     .header{
       display: flex;
       font-family: 'Roboto', sans-serif;
-      margin: 0px 150px;
-      padding: 10px 0px;
+      margin: 0px 200px;
+      padding: 12px 0px;
 
       .header-content{
          flex: 50%;
 
          p{
-            font-size: 16px;
+            font-size: 15px;
             color:$white;
             margin-bottom: 0px;
          }
@@ -46,7 +46,7 @@
                margin: 0 20px 0px 0px;
                padding: 0;
                display: inline;
-               font-size: 15px;
+               font-size: 14px;
                font-weight: 500;
                letter-spacing: 2px;
                position: relative;
