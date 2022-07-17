@@ -13,8 +13,8 @@ body{
     .slider-content{
 
         top: 200px;
-        position: absolute;
         left: 200px;
+        position: absolute;
         animation: textup 3s linear infinite;
         transform: translateY(100px);
 
@@ -59,4 +59,18 @@ body{
         }
     }
 
+}
+
+.cloth{
+    margin-left: 33.33%;
+    .clothing{
+        position: relative;
+        .clothing-content{
+            position: absolute;
+            top: 140px;
+        }
+        .clothing-img{
+            margin-left: 200px;
+        }
+    }
 }

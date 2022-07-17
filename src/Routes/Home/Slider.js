@@ -22,11 +22,11 @@ export default class PauseOnHover extends Component {
     };
 
     return (
-      <div className="banner-carousel banner-carousel-1 mb-0">
+      <div className="banner-carousel banner-carousel-1 mb-0 ">
         <Slider {...settings}>
           <div>
           <div className='slider'>
-        <div className='slider-content col-md-6'>
+        <div className='slider-content col-md-6 container'>
           <h5>SUMMER COLLECTION</h5>
           <h1 className='my-4'> <b> <span> Celebrate </span><br /> Summer - 2022 </b></h1>
           <p className='mb-4'>A specialist label creating luxury essentials. Ethically crafted <br /> with an unwavering commitment to exceptional quality.</p>

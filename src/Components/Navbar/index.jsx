@@ -20,8 +20,8 @@ const Navbar = () => {
   const showSidebar = () => setShowMenu(!showMenu)
   
   return (
-    <div className=''>
-      <div className='navbar'>
+    <div className='container'>
+      <div className='navbar mx-5'>
       <div className='nav-logo'>
         <img className='logo-img' src="/images/logo.svg" alt="" />
       </div>
