@@ -222,5 +222,36 @@ body{
     
 }
 
+.cardss{
+    margin:0px 200px;
+    display: flex;
+}
+.instagram{
+    margin: 100px 200px;
+    display: flex;
+
+    .insta-content{
+        margin-left: 50px;
+        margin-top: 150px;
+
+        h5{
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        p{
+            margin-top: 20px;
+            color: $dark-grey;
+        }
+
+        h2{
+            margin-top: 50px;
+            color: $pink;
+            font-size: 36px;
+            font-weight: 700;
+        }
+    }
+}
+
 
 
