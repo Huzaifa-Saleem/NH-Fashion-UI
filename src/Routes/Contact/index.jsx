@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Button from "../../Components/Button/index";
 import "./contact.scss";
 const Contact = () => {
-  const [contactForm, setContactForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    console.log({name, email, message})
+  }
+  
 
   return (
     <>
@@ -16,9 +20,7 @@ const Contact = () => {
           width="100%"
           height="600px"
           style={{ border: 0 }}
-          allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
           title="map"
         ></iframe>
       </div>
@@ -43,39 +45,39 @@ const Contact = () => {
             <br />
             <br />
             <br />
-            <form>
+            <form onSubmit={handleSubmit}>
               <input
                 type="name"
                 id="name"
                 name="name"
-                value={contactForm.name}
+                value={name}
                 placeholder="Name"
                 onChange={(e) =>
-                  setContactForm((e.target.name = e.target.value))
+                  setName((e.target.name = e.target.value))
                 }
               />
               <input
                 type="email"
                 id="email"
                 name="email"
-                value={contactForm.email}
+                value={email}
                 placeholder="Email"
                 onChange={(e) =>
-                  setContactForm((e.target.name = e.target.value))
+                  setEmail((e.target.name = e.target.value))
                 }
               />
               <textarea
                 type="message"
                 id="message"
                 name="message"
-                value={contactForm.message}
+                value={message}
                 placeholder="Message"
                 onChange={(e) =>
-                  setContactForm((e.target.name = e.target.value))
+                  setMessage((e.target.name = e.target.value))
                 }
                 style={{ height: 100, width: "86%", padding: "7px" }}
               ></textarea>
-              <Button title="SEND MESSAGE" />
+              <Button title='SEND MESSAGE' />
             </form>
           </div>
         </div>
