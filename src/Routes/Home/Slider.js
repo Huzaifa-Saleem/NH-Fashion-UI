@@ -1,4 +1,4 @@
-import React, { Component, useEffect} from "react";
+import React, { Component } from "react";
 import Slider from "react-slick";
 import Button from "../../Components/Button";
 import "slick-carousel/slick/slick.css"; 
@@ -7,6 +7,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
 
 
 export default class PauseOnHover extends Component {
@@ -17,7 +18,7 @@ export default class PauseOnHover extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 8000,
       pauseOnHover: true
     };
 
@@ -26,11 +27,11 @@ export default class PauseOnHover extends Component {
         <Slider {...settings}>
           <div>
           <div className='slider'>
-        <div className='slider-content col-md-6 container'>
+        <div className='slider-content col-md-6 '>
           <h5>SUMMER COLLECTION</h5>
           <h1 className='my-4'> <b> <span> Celebrate </span><br /> Summer - 2022 </b></h1>
           <p className='mb-4'>A specialist label creating luxury essentials. Ethically crafted <br /> with an unwavering commitment to exceptional quality.</p>
-          <Button link='/' title='SHOP NOW'/>
+          <Button  title='SHOP NOW' /> 
           <div className="icons">
             <ul>
                 <li><FacebookIcon/></li>

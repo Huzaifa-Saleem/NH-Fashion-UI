@@ -1,19 +1,16 @@
 @import "../../Themes/Colors.scss";
-.btn{
+.btn11{
     padding: 0px;
     margin-top: 25px;
-    a{
+    &{
         color: $white;
         background-color: $black;
-        padding: 17px 27px;
+        padding: 12px 22px;
         font-size: 14px;
         font-weight: 500;
         text-decoration: none;
         letter-spacing: 2px;
-
-        span{
-            margin: 2px;
-        }
+        border: none;
 
         &:hover{
             box-shadow:rgba(184, 181, 181,0.7) 0px 2px 5px ;

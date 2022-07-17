@@ -12,11 +12,9 @@ body{
 
     .slider-content{
 
-        top: 200px;
-        left: 200px;
-        position: absolute;
-        animation: textup 3s linear infinite;
-        transform: translateY(100px);
+        animation: textup 8s linear ;
+
+        transform: translateY(50px);
 
         @keyframes textup{
             10%{
@@ -63,14 +61,166 @@ body{
 
 .cloth{
     margin-left: 33.33%;
+    margin-top: 100px;
     .clothing{
         position: relative;
         .clothing-content{
             position: absolute;
             top: 140px;
+            letter-spacing: 1px;
+        
+            h2{
+                font-size: 35px;
+                font-weight: 700;
+                color: $black;
+                margin-bottom: 15px;
+            }
+            a{
+               color:$black;
+               text-decoration: none;
+            //    margin-top: 25px;
+               padding: 3px;
+               font-size: 14px;
+               font-weight: 700;
+               letter-spacing: 2px;
+               position: relative;
+               border-radius: 1px;
+
+               &::after{
+                content: " ";
+                background-color: $black;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                left: 0;
+                transition: all .5s ease;
+                bottom: -6px;
+            }
+            }
+           
         }
         .clothing-img{
-            margin-left: 200px;
+            margin-left: 250px;
+        }
+
+        &:hover{
+            a::after{
+                background-color: $pink;
+                border-bottom: none;
+                width: 50%;
+             }
         }
     }
 }
+
+.flex{
+    display: flex;
+    margin-bottom: 100px;
+
+    .accessories{
+        flex: 40%;
+        margin-left: 200px;
+        margin-top: -70px;
+    
+        .accessories-content{
+            margin-top: 30px;
+            letter-spacing: 1px;
+        
+            h2{
+                font-size: 35px;
+                font-weight: 700;
+                color: $black;
+                margin-bottom: 15px;
+            }
+            a{
+               color:$black;
+               text-decoration: none;
+            //    margin-top: 25px;
+               padding: 3px;
+               font-size: 14px;
+               font-weight: 700;
+               letter-spacing: 2px;
+               position: relative;
+               border-radius: 1px;
+    
+               &::after{
+                content: " ";
+                background-color: $black;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                left: 0;
+                transition: all .5s ease;
+                bottom: -6px;
+                }
+            }
+        }
+
+        &:hover{
+            a::after{
+                background-color: $pink;
+                border-bottom: none;
+                width: 50%;
+             }
+        }
+    }
+
+    .shoes{
+        flex: 60%;
+        position: relative;
+        
+        .shoes-content{
+            position: absolute;
+            top: 200px;
+            letter-spacing: 1px;
+        
+            h2{
+                font-size: 35px;
+                font-weight: 700;
+                color: $black;
+                margin-bottom: 15px;
+            }
+            a{
+               color:$black;
+               text-decoration: none;
+            //    margin-top: 25px;
+               padding: 3px;
+               font-size: 14px;
+               font-weight: 700;
+               letter-spacing: 2px;
+               position: relative;
+               border-radius: 1px;
+
+               &::after{
+                content: " ";
+                background-color: $black;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                left: 0;
+                transition: all .5s ease;
+                bottom: -6px;
+            }
+            }
+           
+        }
+        .shoes-img{
+            display: block;
+            text-align: right;
+            margin-right: 200px;
+            margin-top: 100px;
+        }
+
+        &:hover{
+            a::after{
+                background-color: $pink;
+                border-bottom: none;
+                width: 50%;
+             }
+        }
+    }
+    
+}
+
+
+

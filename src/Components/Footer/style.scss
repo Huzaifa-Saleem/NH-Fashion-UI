@@ -65,15 +65,22 @@ footer{
         border-bottom: rgb(189, 189, 189) 1.5px solid;
         width: 130%;
         padding-bottom: 5px;
+        color: white;
         &::placeholder{
             color: #c8c8c8;
         }
         &:focus{
             color: white;
+            
+        &:active{
+            color: white;
+        }
+        
         }
 
     }
     .icon{
+        margin-bottom:-30px ;
         color: #c8c8c8;
     }
     hr{

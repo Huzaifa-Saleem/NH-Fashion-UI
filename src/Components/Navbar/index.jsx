@@ -23,7 +23,7 @@ const Navbar = () => {
     <div className='container'>
       <div className='navbar mx-5'>
       <div className='nav-logo'>
-        <img className='logo-img' src="/images/logo.svg" alt="" />
+        <Link to='/e'><img className='logo-img' src="/images/logo.svg" alt="" /></Link>
       </div>
       <div className={showMenu ? "nav-link" : "nav-links"}>
       <button>
