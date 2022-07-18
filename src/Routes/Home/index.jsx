@@ -1,10 +1,9 @@
-import {useEffect, useState} from 'react'
+
 import "../Home/home.scss";
 import {Link} from 'react-router-dom'
-import Slider from '../Home/Slider'
-import Card from '../../Components/Card';
-import card from '../../Components/Card/cardmap';
+import Slider from '../../Components/Slider/index'
 import BasicTabs from '../../Components/Tabs';
+import Button from "../../Components/Button";
 
 const Home = () => {
   
@@ -48,6 +47,30 @@ const Home = () => {
       </section>
      
               <BasicTabs/>
+
+      <section>
+        <div className="sale row">
+          <div className="col-md-4 collections">
+            <div className="white-box"></div>
+            <div className="collections-content">
+              <h4 className="shoe">Clothings</h4>
+              <h4>Shoes Collection</h4>
+              <h4 className="shoe">Accessories</h4>
+            </div>
+          </div>
+          <div className="col-md-4 bag">
+          <img src="/images/bag.webp" alt="" />
+          <p className="align-middle"> <span> Sale Of </span><br /> Rs.2999</p>
+          </div>
+          <div className="col-md-4 sale-content">
+              <p className="deal">DEAL OF THE WEAK</p>
+              <h4>Bags Collection</h4>
+              <p className="time">30 &nbsp;:&nbsp; 03 &nbsp;:&nbsp; 09 &nbsp;:&nbsp; 02</p>
+              <p className="days">Days <span></span> Hours <span></span> Minutes <span></span> Seconds</p>
+              <Button title='SHOP NOW'/>
+          </div>
+        </div>
+      </section>
       <section className='instagram'>
            <div>
             <img src="/images/insta-cloth.jpg" alt="" width={700} height="auto"/>

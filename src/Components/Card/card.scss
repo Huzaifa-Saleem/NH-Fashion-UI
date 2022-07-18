@@ -53,6 +53,97 @@
       display: block;
     }
 
+    .flex{
+        display: flex;
+        margin-bottom: 0px;
+
+        .color{
+            display: flex;
+            flex: 50%;
+            align-items: center;
+            margin-left: 100px;
+            opacity: 0;
+
+            .red{
+                position: relative;
+                content: "";
+                background-color: red;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                margin: 0px 4px;
+
+                &::after{
+                    position: absolute;
+                    left: -3px;
+                    top: -3px;
+                    height: 18px;
+                    width: 18px;
+                    border: 1px solid #b9b9b9;
+                    content: "";
+                    border-radius: 50%;
+                }
+
+            }
+            .green{
+                position: relative;
+                content: "";
+                background-color: green;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                margin: 0px 4px;
+
+                &::after{
+                    position: absolute;
+                    left: -3px;
+                    top: -3px;
+                    height: 18px;
+                    width: 18px;
+                    border: 1px solid #b9b9b9;
+                    content: "";
+                    border-radius: 50%;
+                }
+
+            }
+            .blue{
+                position: relative;
+                content: "";
+                background-color: blue;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                margin: 0px 4px;
+
+                &::after{
+                    position: absolute;
+                    left: -3px;
+                    top: -3px;
+                    height: 18px;
+                    width: 18px;
+                    border: 1px solid #b9b9b9;
+                    content: "";
+                    border-radius: 50%;
+                }
+
+            }
+
+            // .active{
+            //     position: absolute;
+            //         left: -3px;
+            //         top: -3px;
+            //         height: 18px;
+            //         width: 18px;
+            //         border: 1px solid #b9b9b9;
+            //         content: "";
+            //         border-radius: 50%;
+            // }
+
+        }
+
+    }
+
+
     &:hover {
         .hide{
             margin-top: 15px;
@@ -65,6 +156,9 @@
         }    
         h6{
             display: none;
+        }
+        .color{
+            opacity: 1;
         }
     }
 }
