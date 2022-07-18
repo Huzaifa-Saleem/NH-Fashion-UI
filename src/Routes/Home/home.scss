@@ -224,7 +224,8 @@ body{
 
 .cardss{
     margin:0px 200px;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
 .instagram{
     margin: 100px 200px;

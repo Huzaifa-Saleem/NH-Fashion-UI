@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import Slider from '../Home/Slider'
 import Card from '../../Components/Card';
 import card from '../../Components/Card/cardmap';
-import BasicTabs from '../../Components/Tabs/tabs';
+import BasicTabs from '../../Components/Tabs';
 
 const Home = () => {
   

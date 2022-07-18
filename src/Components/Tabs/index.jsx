@@ -67,7 +67,10 @@ export default function BasicTabs() {
             <Card 
             src={val.src} 
             title={val.title} 
-            price={val.price} /></div>
+            price={val.price}
+            openSpots={val.openSpots}
+            sale={val.sale}
+            version={val.version} /></div>
           );
         }
           )}
@@ -80,7 +83,10 @@ export default function BasicTabs() {
             <Card 
             src={val.src} 
             title={val.title} 
-            price={val.price} /></div>
+            price={val.price}
+            openSpots={val.openSpots}
+            sale={val.sale}
+            version={val.version} /></div>
           );
         }
           )}
@@ -93,7 +99,10 @@ export default function BasicTabs() {
             <Card 
             src={val.src} 
             title={val.title} 
-            price={val.price} /></div>
+            price={val.price}
+            openSpots={val.openSpots}
+            sale={val.sale}
+            version={val.version} /></div>
           );
         }
           )}
