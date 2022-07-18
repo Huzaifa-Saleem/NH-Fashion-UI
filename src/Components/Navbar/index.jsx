@@ -30,7 +30,7 @@ const Navbar = () => {
         <CloseIcon sx={{ fontSize: 30, color:'white'}} onClick = {showSidebar}/>
         </button>
         <ul>
-            <li><NavLink to='/home' className='link'>Home</NavLink></li>
+            <li><NavLink to='/' className='link'>Home</NavLink></li>
             <li><NavLink to='/products' className='link'>Products</NavLink></li>
             <li><NavLink to='/contact' className='link'>Contact</NavLink></li>
         </ul>
