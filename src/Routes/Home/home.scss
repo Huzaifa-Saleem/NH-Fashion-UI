@@ -172,32 +172,7 @@ body{
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
-.instagram{
-    margin: 100px 200px;
-    display: flex;
 
-    .insta-content{
-        margin-left: 50px;
-        margin-top: 150px;
-
-        h5{
-            font-size: 30px;
-            font-weight: 700;
-        }
-
-        p{
-            margin-top: 20px;
-            color: $dark-grey;
-        }
-
-        h2{
-            margin-top: 50px;
-            color: $pink;
-            font-size: 36px;
-            font-weight: 700;
-        }
-    }
-}
 
 .sale{
     background-color: $light-grey;
@@ -279,5 +254,457 @@ body{
 
     }
 }
+
+.instagram{
+    margin: 100px 200px;
+    display: flex;
+
+    .img img{
+        width: 600px;
+        height: auto;
+    }
+
+    .insta-content{
+        margin-left: 50px;
+        margin-top: 150px;
+
+        h5{
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        p{
+            margin-top: 20px;
+            color: $dark-grey;
+        }
+
+        h2{
+            margin-top: 50px;
+            color: $pink;
+            font-size: 36px;
+            font-weight: 700;
+        }
+    }
+}
+
+@media (min-width: 1250px) and (max-width: 1400px) {
+
+    .cardss{
+        margin:0px 220px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+    }
+    .flex {
+        display: block;
+        .accessories{
+            margin-left: 170px;
+            margin-top: 30px;
+            position: absolute;
+
+            .accessories-content{
+                position: relative;
+                top: -310px;
+                left: 520px;
+            }
+        }
+        .shoes{
+
+            top:620px;
+            margin-bottom: 700px;
+            .shoes-img{
+                margin-left: 30%;
+                margin-right:100px;
+            }
+            .shoes-content{
+                margin-left: 530px;
+            }
+        }
+    }
+
+    .cloth{
+        margin-left: 30%;
+    }
+
+    .instagram{
+        margin: 100px 150px;
+    }
+    .sale {
+        .sale-content{
+            margin-top: 100px;
+            text-align: center;
+        }
+    }
+    
+    }
+    @media (min-width: 1150px) and (max-width: 1250px) {
+
+        .cardss{
+            margin:0px 180px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            align-items: center;
+        }
+        .flex {
+            display: block;
+            .accessories{
+                margin-left: 170px;
+                margin-top: 30px;
+                position: absolute;
+    
+                .accessories-content{
+                    position: relative;
+                    top: -310px;
+                    left: 520px;
+                }
+            }
+            .shoes{
+    
+                top:620px;
+                margin-bottom: 700px;
+                .shoes-img{
+                    margin-left: 30%;
+                    margin-right: 100px;
+                }
+                .shoes-content{
+                    margin-left: 500px;
+                }
+            }
+        }
+    
+        .cloth{
+            margin-left: 30%;
+        }
+
+        .instagram{
+            margin: 100px 150px;
+            display: block;
+            text-align: center;
+            .insta-content{
+                margin-top: 50px;
+            }
+        }
+
+        .sale {
+            .sale-content{
+                margin-top: 100px;
+                text-align: center;
+            }
+        }
+       
+        }
+    
+    @media (min-width: 1050px) and (max-width: 1150px) {
+
+        .cardss{
+            margin:0px 160px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            align-items: center;
+        }
+
+        .flex {
+            display: block;
+            .accessories{
+                margin-left: 170px;
+                margin-top: 30px;
+                position: absolute;
+
+                .accessories-content{
+                    position: relative;
+                    top: -310px;
+                    left: 520px;
+                }
+            }
+            .shoes{
+
+                top:620px;
+                margin-bottom: 700px;
+                .shoes-img{
+                    margin-left: 25%;
+                    margin-right: 100px;
+                }
+                .shoes-content{
+                    margin-left: 350px;
+                }
+            }
+        }
+        .cloth{
+            margin-left: 25%;
+        }
+        .instagram{
+            margin: 100px 150px;
+            display: block;
+            text-align: center;
+            .insta-content{
+                margin-top: 50px;
+            }
+        }
+
+        .sale {
+            .sale-content{
+                margin-top: 100px;
+                text-align: center;
+            }
+        }
+
+    }
+
+    @media (min-width: 900px) and (max-width: 1050px) {
+
+        .cardss{
+            margin:0px 40px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            align-items: center;
+        }
+
+        .flex {
+            display: block;
+            .accessories{
+                margin-left: 130px;
+                margin-top: 30px;
+                position: absolute;
+
+                .accessories-content{
+                    position: relative;
+                    top: -310px;
+                    left: 520px;
+                }
+            }
+            .shoes{
+
+                top:620px;
+                margin-bottom: 700px;
+                .shoes-img{
+                    margin-left: 15%;
+                    margin-right: 100px;
+                }
+                .shoes-content{
+                    margin-left: 220px;
+                }
+            }
+        }
+    
+        .cloth{
+            margin-left: 15%;
+        }
+        .instagram{
+            margin: 100px 120px;
+            display: block;
+            text-align: center;
+            .insta-content{
+                margin-top: 50px;
+            }
+        }
+
+        .sale {
+            .sale-content{
+                margin-top: 100px;
+                text-align: center;
+            }
+        }
+    
+    }
+
+    @media (min-width: 768px) and (max-width: 900px) {
+
+        .cardss{
+            margin:0px 130px;
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+        }
+
+        .flex {
+            display: block;
+            .accessories{
+                margin-left: 130px;
+                margin-top: 30px;
+                position: absolute;
+
+                .accessories-content{
+                    position: relative;
+                    top: -310px;
+                    left: 520px;
+                }
+            }
+            .shoes{
+                
+                top:620px;
+                margin-bottom: 700px;
+                .shoes-img{
+                    margin-left: 7%;
+                    margin-right: 50px;
+                }
+                .shoes-content{
+                    margin-left: 130px;
+                }
+            }
+        } 
+    
+        .cloth{
+            margin-left: 7%;
+        }
+
+        .cloth .clothing .clothing-img{
+           margin-left: 200px;
+        }
+
+        .instagram{
+            margin: 100px 100px;
+            display: block;
+            text-align: center;
+            .img img{
+                max-width: 500px;
+            }
+            .insta-content{
+                margin-top: 50px;
+            }
+        }
+        .sale {
+            .collections{
+                .white-box{
+                    width: 300px;
+                }
+                .collections-content{
+                    left: 180px;
+                }
+            }
+            .sale-content{
+                margin-top: 100px;
+                text-align: center;
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+
+        .cardss{
+            margin:0px 80px;
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+        }
+
+        .cloth{
+            margin-left: 130px;
+        }
+    
+        .cloth .clothing .clothing-content{
+            max-width: 100%;
+            position: relative;
+            top: 0;
+            padding-top: 30px;
+        }
+        .cloth .clothing .clothing-img{
+            margin-left: 0px;
+         }
+         .flex{
+            display: block;
+            .accessories{
+                margin-top: 0px;
+                margin-left: 130px;
+
+                .accessories-img{
+                    margin-top: 100px;
+                }
+             }
+            .shoes{
+                margin-left: 130px;
+                .shoes-content{
+                    position: relative;
+                    top: 0;
+                    padding-top: 30px;
+                }
+                .shoes-img{
+                    margin-right: 30px;
+                    text-align: left;
+                }
+            }
+         } 
+            
+         .instagram{
+            margin: 100px 100px;
+            display: block;
+            text-align: center;
+        .img img{
+            width: 400px;
+        }
+            .insta-content{
+                margin-top: 50px;
+            }
+        }
+        .sale {
+            .collections{
+                .white-box{
+                    width: 300px;
+                }
+                .collections-content{
+                    left: 180px;
+                }
+            }
+            .bag{
+                margin: 100px 0px;
+                text-align: center;
+            }
+            .sale-content{
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 620px) {
+        .cardss{
+            margin:0px 140px;
+            display: grid;
+            grid-template-columns: auto;
+            align-items: center;
+        }
+
+        .cloth{
+            margin-left: 80px;
+        }
+        .flex .accessories{
+            margin-left: 80px;
+        }
+        .flex .shoes{
+             margin-left: 80px;
+             .shoes-img{
+                margin-right: 0px;
+                text-align: left;
+            }
+        }
+        .instagram{
+            margin: 100px 150px;
+            display: block;
+            text-align: center;
+
+            .img img{
+                width: 300px;
+            }
+            .insta-content{
+                margin-top: 50px;
+            }
+        }
+        .sale {
+            .collections{
+                .white-box{
+                    width: 300px;
+                }
+                .collections-content{
+                    left: 180px;
+                }
+            }
+            .bag{
+                margin: 100px 0px;
+                text-align: center;
+            }
+            .sale-content{
+                text-align: center;
+            }
+        }
+    } 
+            
 
 

@@ -8,8 +8,6 @@ import "../Tabs/tab.scss";
 import card from '../Card/cardmap';
 import Card from '../Card';
 
-
-
 function TabPanel(props) {
 
   const { children, value, index, ...other } = props;

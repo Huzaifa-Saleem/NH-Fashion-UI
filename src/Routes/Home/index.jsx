@@ -15,18 +15,18 @@ const Home = () => {
       <section>
       <div className='cloth'>
         <div className='clothing'>
+        <div className='clothing-img img-fluid'>
+              <img src="/images/clothing.webp" alt="" />
+          </div>
           <div className='clothing-content'>
               <h2>Clothing <br /> Collections 2022</h2>
               <Link to='/'>SHOP NOW</Link>
-          </div>
-          <div className='clothing-img'>
-              <img src="/images/clothing.webp" alt="" />
           </div>
         </div>
       </div>
       <div className='flex'>
       <div className='accessories'>
-      <div className='accessories-img'>
+      <div className='accessories-img img-fluid'>
         <img src="/images/accessories.jpg" alt="" />
       </div>
       <div className='accessories-content'>
@@ -35,13 +35,13 @@ const Home = () => {
       </div>
       </div>
       <div className='shoes'>
+      <div className='shoes-img img-fluid'>
+            <img src="/images/shoes.jpg" alt="" />
+        </div>
           <div className='shoes-content'>
           <h2>Shoes Spring <br /> 2022</h2>
           <Link to='/'>SHOP NOW</Link>
           </div>
-        <div className='shoes-img'>
-            <img src="/images/shoes.jpg" alt="" />
-        </div>
       </div>
       </div>
       </section>
@@ -50,7 +50,7 @@ const Home = () => {
 
       <section>
         <div className="sale row">
-          <div className="col-md-4 collections">
+          <div className="col-xxl-4 col-md-6 collections">
             <div className="white-box"></div>
             <div className="collections-content">
               <h4 className="shoe">Clothings</h4>
@@ -58,11 +58,11 @@ const Home = () => {
               <h4 className="shoe">Accessories</h4>
             </div>
           </div>
-          <div className="col-md-4 bag">
+          <div className="col-xxl-4 col-md-6 bag">
           <img src="/images/bag.webp" alt="" />
           <p className="align-middle"> <span> Sale Of </span><br /> Rs.2999</p>
           </div>
-          <div className="col-md-4 sale-content">
+          <div className="col-xxl-4 sale-content">
               <p className="deal">DEAL OF THE WEAK</p>
               <h4>Bags Collection</h4>
               <p className="time">30 &nbsp;:&nbsp; 03 &nbsp;:&nbsp; 09 &nbsp;:&nbsp; 02</p>
@@ -72,8 +72,8 @@ const Home = () => {
         </div>
       </section>
       <section className='instagram'>
-           <div>
-            <img src="/images/insta-cloth.jpg" alt="" width={700} height="auto"/>
+           <div className="img">
+            <img src="/images/insta-cloth.jpg" alt=""/>
            </div>
            <div className='insta-content'>
             <h5>Instagram</h5>
