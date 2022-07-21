@@ -4,7 +4,7 @@ import Pagination from "../../Components/Pagination";
 
 import { Link } from "react-router-dom";
 import ProductFilter from "../../Components/ProductFilter";
-import Card1 from "../../Components/Card1";
+import Card from "../../Components/Card";
 import Data from "../../Components/Card1/data";
 const Products = () => {
   const [posts, setPosts] = useState([]);
@@ -89,7 +89,7 @@ const Products = () => {
           <div className="contaiiner data">
             {currentPosts.map((post) => {
               return (
-                <Card1
+                <Card
                   key={post.id}
                   img={post.img}
                   title={post.title}

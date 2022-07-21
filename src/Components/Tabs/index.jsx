@@ -5,8 +5,8 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import "../Tabs/tab.scss";
-import card from '../Card/cardmap';
-import Card from '../Card';
+import Card from '../../Components/Card/index';
+import data from '../../Components/Card/data';
 
 function TabPanel(props) {
 
@@ -60,10 +60,10 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0}>
       <section  className='cardss'>
-          {card.map(function value(val){
+          {data.map(function value(val){
            return (<div className="container">
             <Card 
-            src={val.src} 
+            img={val.img} 
             title={val.title} 
             price={val.price}
             openSpots={val.openSpots}
@@ -76,10 +76,10 @@ export default function BasicTabs() {
       </TabPanel>
       <TabPanel value={value} index={1}>
       <section  className='cardss'>
-          {card.map(function value(val){
+          {data.map(function value(val){
            return (<div className="container">
             <Card 
-            src={val.src} 
+            img={val.img} 
             title={val.title} 
             price={val.price}
             openSpots={val.openSpots}
@@ -92,10 +92,10 @@ export default function BasicTabs() {
       </TabPanel>
       <TabPanel value={value} index={2}>
       <section  className='cardss'>
-          {card.map(function value(val){
+          {data.map(function value(val){
            return (<div className="container">
             <Card 
-            src={val.src} 
+            img={val.img} 
             title={val.title} 
             price={val.price}
             openSpots={val.openSpots}

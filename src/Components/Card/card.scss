@@ -1,166 +1,85 @@
-@import "../../Themes/Colors.scss";
-
-.cards{
-    position: relative;
-    max-width: 250px;
-    flex: 25%;
-    padding: 30px 0px;
-
-        .badges{
-            position: absolute;
-            top: 50px;
-            background-color: $black;
-            color: $white;
-            padding: 5px 10px;
-            font-size: 10px;
-            font-weight: 600;
-        }
-        .fav{
-            position: absolute;
-            top: 40px;
-            background-color: $white;
-            padding: 7px 7px;
-            margin-left: 200px;
-            display: none;
-        }
-
-    .hide{
-        display: none;
-        a{
-            margin-bottom: 3px;
-            margin-right: 0px;
-            color: $pink; 
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-        }
-            
-    }
-
-    h6{
-        color: $black;
-        margin-top: 20px;
-        margin-bottom: 3px;
-        margin-right: 0px;
-    }
-    h5{ 
-        color: $black;
-        font-weight: 700;
-        margin-top: 10px;
-    }
-
-    img{
-      display: block;
-    }
-
-    .flex{
-        display: flex;
-        margin-bottom: 0px;
-
-        .color{
-            display: flex;
-            flex: 50%;
-            align-items: center;
-            margin-left: 100px;
-            opacity: 0;
-
-            .red{
-                position: relative;
-                content: "";
-                background-color: red;
-                border-radius: 50%;
-                width: 12px;
-                height: 12px;
-                margin: 0px 4px;
-
-                &::after{
-                    position: absolute;
-                    left: -3px;
-                    top: -3px;
-                    height: 18px;
-                    width: 18px;
-                    border: 1px solid #b9b9b9;
-                    content: "";
-                    border-radius: 50%;
-                }
-
-            }
-            .green{
-                position: relative;
-                content: "";
-                background-color: green;
-                border-radius: 50%;
-                width: 12px;
-                height: 12px;
-                margin: 0px 4px;
-
-                &::after{
-                    position: absolute;
-                    left: -3px;
-                    top: -3px;
-                    height: 18px;
-                    width: 18px;
-                    border: 1px solid #b9b9b9;
-                    content: "";
-                    border-radius: 50%;
-                }
-
-            }
-            .blue{
-                position: relative;
-                content: "";
-                background-color: blue;
-                border-radius: 50%;
-                width: 12px;
-                height: 12px;
-                margin: 0px 4px;
-
-                &::after{
-                    position: absolute;
-                    left: -3px;
-                    top: -3px;
-                    height: 18px;
-                    width: 18px;
-                    border: 1px solid #b9b9b9;
-                    content: "";
-                    border-radius: 50%;
-                }
-
-            }
-
-            // .active{
-            //     position: absolute;
-            //         left: -3px;
-            //         top: -3px;
-            //         height: 18px;
-            //         width: 18px;
-            //         border: 1px solid #b9b9b9;
-            //         content: "";
-            //         border-radius: 50%;
-            // }
-
-        }
-
-    }
-
-
-    &:hover {
+.productCard{
+   
     transition: all 1s ease;
-
-        .hide{
-            margin-top: 15px;
-            display: block;
-            transition: .5s ease-in-out;
-        }
-        .fav{
-            display: block;
-            transition: .5s ease-in-out;
-        }    
-        h6{
-            display: none;
-        }
-        .color{
-            opacity: 1;
-        }
+    .img{
+        z-index: 3;
     }
+img{
+    width: 250px;
+    z-index: 2;
+}
+.title{
+    margin: 26px 0px 13px 0px;
+}
+h4{
+    font-size: 16px;
+    font-weight: 600;
+}
+a{  
+    position: absolute;
+    background: white;
+    padding: 8px 148px 8px 5px;
+    transform: translateY(-20px);
+    // margin-top: -20px;
+    transform: rotateX(90deg);
+    color: red;
+    // opacity: 0;
+    z-index: 0;
+    transition: all .2s ease;
+
+    
+}
+.star{
+    margin-top: -10px;
+    width: 13px;
+}
+.price{
+    margin: -25px 0px 0px 0px;
+
+    h3{
+        font-weight: 700;
+        font-size: 20px;
+        color: #111111;
+    }
+}
+
+.circle{
+    position: absolute;
+    width: 14px;
+    transform: translate(195px, -35px);
+    opacity: 0;
+    transition: all .5s ease;
+    
+    &:nth-child(2){
+        margin-left: 20px;
+    }
+    &:nth-child(3){
+        margin-left: 40px;
+    }
+
+}
+.heart{
+    position: absolute;
+    transform: translate(225px, 10px);
+    background:white ;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+&:hover{
+    a{
+        opacity: 1;
+        transform:translateY(10px);
+    }
+    .circle{
+        opacity: 1;
+    }
+    .heart{
+        opacity: 1;
+        transform: translate(215px,10px);
+    }
+}
 }
