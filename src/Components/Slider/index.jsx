@@ -19,7 +19,7 @@ export default class PauseOnHover extends Component {
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 8000,
-      pauseOnHover: true
+      pauseOnHover: false
     };
 
     return (

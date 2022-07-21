@@ -1,0 +1,85 @@
+.productCard{
+   
+    transition: all 1s ease;
+    .img{
+        z-index: 3;
+    }
+img{
+    width: 250px;
+    z-index: 2;
+}
+.title{
+    margin: 26px 0px 13px 0px;
+}
+h4{
+    font-size: 16px;
+    font-weight: 600;
+}
+a{  
+    position: absolute;
+    background: white;
+    padding: 8px 148px 8px 5px;
+    transform: translateY(-20px);
+    // margin-top: -20px;
+    transform: rotateX(90deg);
+    color: red;
+    // opacity: 0;
+    z-index: 0;
+    transition: all .2s ease;
+
+    
+}
+.star{
+    margin-top: -10px;
+    width: 13px;
+}
+.price{
+    margin: -25px 0px 0px 0px;
+
+    h3{
+        font-weight: 700;
+        font-size: 20px;
+        color: #111111;
+    }
+}
+
+.circle{
+    position: absolute;
+    width: 14px;
+    transform: translate(195px, -35px);
+    opacity: 0;
+    transition: all .5s ease;
+    
+    &:nth-child(2){
+        margin-left: 20px;
+    }
+    &:nth-child(3){
+        margin-left: 40px;
+    }
+
+}
+.heart{
+    position: absolute;
+    transform: translate(225px, 10px);
+    background:white ;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+&:hover{
+    a{
+        opacity: 1;
+        transform:translateY(10px);
+    }
+    .circle{
+        opacity: 1;
+    }
+    .heart{
+        opacity: 1;
+        transform: translate(215px,10px);
+    }
+}
+}
