@@ -21,7 +21,7 @@ const Navbar = () => {
   
   return (
     <div className='container'>
-      <div className='navbar mx-5'>
+      <div className='navbar mx-md-5'>
       <div className='nav-logo'>
         <Link to='/e'><img className='logo-img' src="/images/logo.svg" alt="" /></Link>
       </div>
@@ -43,7 +43,7 @@ const Navbar = () => {
             <li>
               {isShown && <input type="text" placeholder='search'/>}
               <span></span>
-              <SearchIcon sx={{ fontSize: 26,color:'black'}} onClick={toggle} />
+              <SearchIcon className='search' sx={{ fontSize: 26,color:'black'}} onClick={toggle} />
               </li>
             <li><Link to='/'><FavoriteBorderIcon sx={{ fontSize: 26,color:'black'}}/></Link></li>
             <li><Link to='/'>

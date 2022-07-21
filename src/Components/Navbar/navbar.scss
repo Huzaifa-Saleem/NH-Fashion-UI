@@ -194,6 +194,7 @@ button{
     }
     .navbar .hamburger{
         margin-top: 20px;
+        margin-left: 0px;
     }
     .navbar .nav-icons {
         grid-area: right;
@@ -203,7 +204,7 @@ button{
         padding: 0px 3px;
         }
     .navbar .nav-icons ul{
-        margin-right: 90px;
+        margin-right: 0px;
         }
     .navbar .nav-icons ul li input[type=text]{
             width: 150px;
@@ -238,4 +239,9 @@ button{
     .navbar .nav-icons ul{
     margin-right: 0px;
     }
+}
+@media (max-width: 375px){
+.navbar .nav-icons ul li .search{
+    display: none;
+}
 }

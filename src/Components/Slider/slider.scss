@@ -16,7 +16,7 @@
 
     .slider-content{
         margin-top: 150px;
-        margin-left: 200px;
+        // margin-left: 200px;
         animation: textup 8s linear ;
         transform: translateY(50px);
 
@@ -49,7 +49,6 @@
     }
     .icons{
         margin-top: 220px;
-        margin-left: 200px;
         ul{
             display: flex;
             padding: 0px;
@@ -64,47 +63,29 @@
 
 }
 
-@media (min-width: 1050px) and (max-width: 1350px) {
+@media (max-width: 576px) {
 
-.slider .slider-content{
-    margin-left: 170px;
-}
-.slider .icons{
-    margin-left: 170px;
-}
-
+.slider .slider-content {
+    margin-top: 100px;
+    h1{
+        font-size: 38px;
+    }
 }
 
-@media (min-width: 768px) and (max-width: 1050px) {
+// .slider .icons{
+//     margin-top: 200px;
+// }
 
-    .slider .slider-content{
-        margin-left: 130px;
+}
+
+@media (max-width: 315px) {
+    .slider .slider-content {
+        margin-top: 70px;
     }
     .slider .icons{
-        margin-left: 130px;
+        margin-top: 160px;
+    }
+    
     }
 
-}
-
-@media (max-width: 768px) {
-
-    .slider .slider-content{
-        margin-left: 100px;
-    }
-    .slider .icons{
-        margin-left: 100px;
-    }
-        
-}
-
-@media (max-width: 550px){
-
-    .slider .slider-content{
-        margin-left: 30px;
-    }
-    .slider .icons{
-        margin-left: 30px;
-    }
-
-}
 

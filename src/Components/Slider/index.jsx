@@ -23,10 +23,11 @@ export default class PauseOnHover extends Component {
     };
 
     return (
-      <div className="slider banner-carousel banner-carousel-1 mb-0 ">
+      <div className="slider banner-carousel banner-carousel-1 mb-0">
         <Slider {...settings}>
         <div className="slider1">
-            <div className='slider-content col-md-6'>
+          <div className=" container">
+          <div className='slider-content col-md-6'>
                 <h5>SUMMER COLLECTION</h5>
                 <h1 className='my-4'> <b> <span> Celebrate </span><br /> Summer - 2022 </b></h1>
                 <p className='mb-4'>A specialist label creating luxury essentials. <br/> Ethically crafted with an unwavering commitment to exceptional quality.</p>
@@ -41,9 +42,12 @@ export default class PauseOnHover extends Component {
                 <li><LinkedInIcon/></li>
                 </ul>
             </div>
+          </div>
+            
         </div> 
   
         <div className="slider2">
+        <div className=" container">
             <div className='slider-content col-md-6'>
                 <h5>EID COLLECTION</h5>
                 <h1 className='my-4'> <b> <span> Celebrate </span><br /> Summer - 2022 </b></h1>
@@ -58,6 +62,7 @@ export default class PauseOnHover extends Component {
                 <li><LinkedInIcon/></li>
                 </ul>
             </div>
+          </div>
         </div>
         </Slider>
       </div>
