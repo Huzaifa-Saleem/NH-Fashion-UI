@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Product.scss";
 import Pagination from "../../Components/Pagination";
-
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Link } from "react-router-dom";
 import ProductFilter from "../../Components/ProductFilter";
 import Card from "../../Components/Card";
-import Data from "../../Components/Card1/data";
+import Data from "../../Components/Card/data";
 const Products = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -49,7 +49,7 @@ const Products = () => {
         <div className="container p-head-1">
           <h2 style={{ color: "#111111", fontWeight: "bold" }}>Products</h2>
           <p>
-            <Link to="/">Home</Link> {">"} Products
+            <Link to="/productDetail">Home</Link> <KeyboardArrowRightIcon sx={{ fontSize: 16, color:"black", marginTop:-0.5,}}/> Products
           </p>
         </div>
       </div>
@@ -85,7 +85,7 @@ const Products = () => {
         <div className="col-md-2">
           <ProductFilter />
         </div>
-        <div className="col-md-2 ">
+        <div className="col-md-2">
           <div className="contaiiner data">
             {currentPosts.map((post) => {
               return (
@@ -99,6 +99,7 @@ const Products = () => {
             })}
           </div>
         </div>
+        <div className="col-md-1"></div>
       </div>
       <div className="row">
         <div className="col-md-3"></div>

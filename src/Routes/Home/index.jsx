@@ -2,7 +2,7 @@
 import "../Home/home.scss";
 import {Link} from 'react-router-dom'
 import Slider from '../../Components/Slider/index'
-import BasicTabs from '../../Components/Tabs';
+import Trending from "../../Components/Carousel/Trending";
 import React, { useState, useEffect } from 'react'
 import Button from "../../Components/Button";
 
@@ -99,7 +99,11 @@ return (
 
 {/* ---------------------- Products section----------------------- */} 
 
-{/* <BasicTabs/> */}
+<section>
+  <div className="trending container">
+    <Trending/>
+  </div>
+</section>
 
 {/* ---------------------- Sale section----------------------- */}
 

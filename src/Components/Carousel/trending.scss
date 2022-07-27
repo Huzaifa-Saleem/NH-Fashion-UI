@@ -1,0 +1,12 @@
+@import "../../Themes/Colors.scss";
+
+.deal{
+    color: $pink;
+    letter-spacing: 2px;
+}
+
+@media (max-width:500px){
+    .slider .cards{
+margin: 0px;
+    }
+}
