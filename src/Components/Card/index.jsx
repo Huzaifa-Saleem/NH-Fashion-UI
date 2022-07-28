@@ -14,7 +14,7 @@ const Card = (props) => {
           <FavoriteBorderIcon className="heart"/>
         </div>
         <div className="img">
-          <img src={props.img} alt="product" />
+          <img className="img-fluid" src={props.img} alt="product" />
         </div>
         <div className="addToCart">
           <Link to="product">+ Add to Cart</Link>

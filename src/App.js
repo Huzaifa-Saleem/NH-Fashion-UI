@@ -8,6 +8,7 @@ import Authentication from "./Routes/Authentication";
 import Header from "./Components/Header";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import ProductDetails from "./Routes/ProductDetails";
 const App = () => {
   return (
     
@@ -20,6 +21,7 @@ const App = () => {
           <Route exact path="/authentication" element={<Authentication />} />
           <Route exact path="/products" element={<Products/>} />
           <Route exact path="/contact" element={<Contact/>} />
+          <Route exact path="/productDetail" element={<ProductDetails/>} />
       </Routes>
       <Footer/>
       </Router>
