@@ -3,7 +3,7 @@ import StarIcon from "@mui/icons-material/Star";
 import CircleIcon from "@mui/icons-material/Circle";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Link } from "react-router-dom";
-import "./Card.scss";
+import "./card.scss";
 
 const Card = (props) => {
   return (
