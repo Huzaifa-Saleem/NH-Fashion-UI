@@ -17,7 +17,7 @@ const Card = (props) => {
           <img className="img-fluid" src={props.img} alt="product" />
         </div>
         <div className="addToCart">
-          <Link to="product">+ Add to Cart</Link>
+          <Link to="/addToCart">+ Add to Cart</Link>
         </div>
         <div className="title">
           <h4>{props.title}</h4>

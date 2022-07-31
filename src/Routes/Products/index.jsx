@@ -89,12 +89,12 @@ const Products = () => {
           <div className="contaiiner data">
             {currentPosts.map((post) => {
               return (
-                <Card
+                <Link to="/productDetails"><Card
                   key={post.id}
                   img={post.img}
                   title={post.title}
                   price={post.price}
-                />
+                /></Link>
               );
             })}
           </div>
