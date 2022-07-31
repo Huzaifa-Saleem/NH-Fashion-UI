@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import ProductFilter from "../../Components/ProductFilter";
 import Card from "../../Components/Card";
 import Data from "../../Components/Card/data";
+import axios from 'axios'
 const Products = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -15,9 +16,11 @@ const Products = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
-      const res = await Data;
-      setPosts(res);
+      const res = await axios.get('http://localhost:4000/api/products')
+        setPosts(res.data);
       setLoading(false);
+      
+      
     };
 
     fetchPosts();
@@ -85,7 +88,7 @@ const Products = () => {
         <div className="col-md-2">
           <ProductFilter />
         </div>
-        <div className="col-md-2">
+        <div className="col-md-8">
           <div className="contaiiner data">
             {currentPosts.map((post) => {
               return (

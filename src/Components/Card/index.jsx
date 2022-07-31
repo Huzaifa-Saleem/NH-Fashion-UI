@@ -3,7 +3,7 @@ import StarIcon from "@mui/icons-material/Star";
 import CircleIcon from "@mui/icons-material/Circle";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Link } from "react-router-dom";
-import "./Card.scss";
+import "./card.scss";
 
 const Card = (props) => {
   return (
@@ -35,9 +35,8 @@ const Card = (props) => {
             <h3>${props.price}</h3>
           </div>
           <div className="color d-flex ">
-            <CircleIcon style={{color:'#111'}} className="circle" />
-            <CircleIcon style={{color:'tan'}} className="circle" />
-            <CircleIcon style={{color:'gray'}} className="circle" />
+            <CircleIcon style={{color:`{props.col}`}} className="circle" />
+
           </div>
         </div>
       

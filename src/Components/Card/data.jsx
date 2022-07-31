@@ -4,7 +4,7 @@ const data = [
     title: "Biker Jacket",
     description: "Bikers Jacket made from a high quality genuin leather etc.",
     img: "./Images/clothing.webp",
-    categories: ["new", "sale", "man"],
+    categories: ["new", "trending", "sale", "man"],
     size: ["xs", "s", "m", "l", "xl"],
     color: ["black", "gray", "tan"],
     price: 5000,
@@ -133,4 +133,4 @@ const data = [
   },
 ];
 
-export default data
+export default data;
