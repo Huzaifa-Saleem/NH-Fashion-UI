@@ -6,6 +6,8 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import "./ProductFilter.scss";
+import CircleIcon from "@mui/icons-material/Circle";
+import { Link } from "react-router-dom";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -37,7 +39,7 @@ const AccordionSummary = styled((props) => (
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-//   borderBottom: "1px solid rgba(0, 0, 0, .125)",
+  //   borderBottom: "1px solid rgba(0, 0, 0, .125)",
 }));
 
 export default function ProductFilter() {
@@ -101,11 +103,13 @@ export default function ProductFilter() {
         <AccordionDetails>
           <Typography>
             <div className="container row">
-              <p className="p-10">XS</p>
-              <p className="p-10">S</p>
-              <p className="p-10">M</p>
-              <p className="p-10">L</p>
-              <p className="p-10">XL</p>
+              <div className="acc-size" >XS</div>
+              <div className="acc-size">S</div>
+              <div className="acc-size">M</div>
+              <div className="acc-size">L</div>
+              <div className="acc-size">XL</div>
+              <div className="acc-size">XL</div>
+              <div className="acc-size">XL</div>
             </div>
           </Typography>
         </AccordionDetails>
@@ -122,51 +126,13 @@ export default function ProductFilter() {
         <AccordionDetails>
           <Typography>
             <div className="container row">
-              <p
-                className="p-10 m-1 "
-                style={{
-                  width: 30,
-                  height: 20,
-                  background: "red",
-                  border: "1px solid black",
-                }}
-              ></p>
-              <p
-                className="p-10 m-1 "
-                style={{
-                  width: 30,
-                  height: 20,
-                  background: "yellow",
-                  border: "1px solid black",
-                }}
-              ></p>
-              <p
-                className="p-10 m-1 "
-                style={{
-                  width: 30,
-                  height: 20,
-                  background: "lightgreen",
-                  border: "1px solid black",
-                }}
-              ></p>
-              <p
-                className="p-10 m-1 "
-                style={{
-                  width: 30,
-                  height: 20,
-                  background: "black",
-                  border: "1px solid black",
-                }}
-              ></p>
-              <p
-                className="p-10 m-1 "
-                style={{
-                  width: 30,
-                  height: 20,
-                  background: "white",
-                  border: "1px solid black",
-                }}
-              ></p>
+                <div className="acc-color"></div>
+                <div className="acc-color"></div>
+                <div className="acc-color"></div>
+                <div className="acc-color"></div>
+                <div className="acc-color"></div>
+                <div className="acc-color"></div>
+                <div className="acc-color"></div>
             </div>
           </Typography>
         </AccordionDetails>

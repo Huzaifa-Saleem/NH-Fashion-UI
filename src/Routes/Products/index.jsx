@@ -85,7 +85,7 @@ const Products = () => {
         <div className="col-md-2">
           <ProductFilter />
         </div>
-        <div className="col-md-2">
+        <div className="col-md-8">
           <div className="contaiiner data">
             {currentPosts.map((post) => {
               return (
