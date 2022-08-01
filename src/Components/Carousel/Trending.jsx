@@ -8,7 +8,7 @@ import Card from "../Card";
 
 
 export default class Trending extends Component {
- 
+  
   render() {
     var settings = {
       infinite: true,

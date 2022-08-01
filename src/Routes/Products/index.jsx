@@ -5,7 +5,6 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Link } from "react-router-dom";
 import ProductFilter from "../../Components/ProductFilter";
 import Card from "../../Components/Card";
-import Data from "../../Components/Card/data";
 import axios from 'axios'
 const Products = () => {
   const [posts, setPosts] = useState([]);
@@ -48,10 +47,10 @@ const Products = () => {
   }
   return (
     <div>
-      <div className="container-fluid p-head">
+      <div className="container-fluid p-head py-4">
         <div className="container p-head-1">
           <h2 style={{ color: "#111111", fontWeight: "bold" }}>Products</h2>
-          <p>
+          <p className="mb-0">
             <Link to="/productDetail">Home</Link> <KeyboardArrowRightIcon sx={{ fontSize: 16, color:"black", marginTop:-0.5,}}/> Products
           </p>
         </div>
@@ -92,12 +91,12 @@ const Products = () => {
           <div className="contaiiner data">
             {currentPosts.map((post) => {
               return (
-                <Link to="/productDetails"><Card
-                  key={post.id}
+                <Card
+                  key={post._id}
                   img={post.img}
                   title={post.title}
                   price={post.price}
-                /></Link>
+                />
               );
             })}
           </div>
