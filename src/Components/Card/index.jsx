@@ -3,7 +3,7 @@ import StarIcon from "@mui/icons-material/Star";
 import CircleIcon from "@mui/icons-material/Circle";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Link } from "react-router-dom";
-import "./card.scss";
+import "../Card/card.scss";
 
 const Card = (props) => {
   return (
@@ -13,11 +13,11 @@ const Card = (props) => {
         <div className="fav">
           <FavoriteBorderIcon className="heart"/>
         </div>
-        <div className="img">
+        <Link to={`/productDetails/${props.id}`}><div className="img">
           <img className="img-fluid" src={props.img} alt="product" />
-        </div>
+        </div></Link>
         <div className="addToCart">
-          <Link to="product">+ Add to Cart</Link>
+          <Link className="cart" to="/addToCart">+ Add to Cart</Link>
         </div>
         <div className="title">
           <h4>{props.title}</h4>
@@ -39,7 +39,6 @@ const Card = (props) => {
 
           </div>
         </div>
-      
     </>
   );
 };

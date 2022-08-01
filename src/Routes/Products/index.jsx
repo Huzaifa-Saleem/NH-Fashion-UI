@@ -5,8 +5,10 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { Link, useLocation } from "react-router-dom";
 import ProductFilter from "../../Components/ProductFilter";
 import Card from "../../Components/Card";
+
 import Data from "../../Components/Card/data";
 import axios from "axios";
+
 
 const Products = () => {
   const [posts, setPosts] = useState([]);
@@ -65,15 +67,14 @@ const Products = () => {
   }
   return (
     <div>
-      <div className="container-fluid p-head">
+      <div className="container-fluid p-head py-4">
         <div className="container p-head-1">
           <h2 style={{ color: "#111111", fontWeight: "bold" }}>Products</h2>
-          <p>
-            <Link to="/productDetail">Home</Link>{" "}
-            <KeyboardArrowRightIcon
-              sx={{ fontSize: 16, color: "black", marginTop: -0.5 }}
-            />{" "}
-            Products
+
+          
+          <p className="mb-0">
+            <Link to="/productDetail">Home</Link> <KeyboardArrowRightIcon sx={{ fontSize: 16, color:"black", marginTop:-0.5,}}/> Products
+
           </p>
         </div>
       </div>

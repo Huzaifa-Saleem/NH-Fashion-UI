@@ -18,7 +18,7 @@ h4{
     font-size: 16px;
     font-weight: 600;
 }
-a{  
+.cart{  
     position: absolute;
     background: rgb(255, 255, 255);
     padding: 8px 200px 8px 5px;
@@ -76,7 +76,7 @@ a{
 }
 
 &:hover{
-    a{
+    .cart{
         opacity: 1;
         transform:translateY(10px);
     }

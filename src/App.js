@@ -23,7 +23,7 @@ const App = () => {
           <Route exact path="/products/:fil" element={<Products/>} />
           <Route exact path="/products" element={<Products/>} />
           <Route exact path="/contact" element={<Contact/>} />
-          <Route exact path="/productDetail" element={<ProductDetails/>} />
+          <Route exact path="/productDetails/:id" element={<ProductDetails/>} />
       </Routes>
       <Footer/>
       </Router>
