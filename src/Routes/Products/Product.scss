@@ -38,7 +38,7 @@ p{
 }
 .data{
     display: grid;
-    // margin-left: 30%;
+    margin-left:5%;
     gap: 20px 60px;
     grid-template-columns: auto auto auto ;
    
@@ -51,20 +51,23 @@ p{
 
     .data{
         display: grid;
-        transform: translateX(50%);
+        // transform: translateX(5);
         gap: 20px 60px;
         grid-template-columns: auto auto  ;
         
     }
     
+    .fil{
+        margin-left: 5%;
+    }
 }
 @media screen and (max-width: 800px) {
 
     .data{
         display: grid;
         margin-top: 10%;
-        transform: translateX(-35%);
-        margin-right:20%;
+        transform: translateX(5%);
+        // margin-right:20%;
         gap: 20px 60px;
         grid-template-columns: auto ;
         

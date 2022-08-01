@@ -7,7 +7,7 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import "./ProductFilter.scss";
 import CircleIcon from "@mui/icons-material/Circle";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -63,9 +63,18 @@ export default function ProductFilter() {
         <AccordionDetails>
           <Typography>
             <div className="container ">
-              <p className="p-10">Man</p>
-              <p className="p-10">Woman</p>
-              <p className="p-10">Kids</p>
+              <NavLink to="/products/all">
+                <p className="p-10 hb">All</p>
+              </NavLink>
+              <Link to="/products/category/man">
+                <p className="p-10 hb">Man</p>
+              </Link>
+              <Link to="/products/category/kids">
+                <p className="p-10 hb">Kids</p>
+              </Link>
+              <Link to="/products/category/woman">
+                <p className="p-10 hb">Woman</p>
+              </Link>
             </div>
           </Typography>
         </AccordionDetails>
@@ -82,11 +91,11 @@ export default function ProductFilter() {
         <AccordionDetails>
           <Typography>
             <div className="container ">
-              <p className="p-10">$0.00-$50.00</p>
-              <p className="p-10">$50.00 - $100.00</p>
-              <p className="p-10">$100.00 - $150.00</p>
-              <p className="p-10">$150.00 - $200.00</p>
-              <p className="p-10">$250.00 +</p>
+              <p className="p-10 hb">$0.00 - $50.00</p>
+              <p className="p-10 hb">$50.00 - $100.00</p>
+              <p className="p-10 hb">$100.00 - $150.00</p>
+              <p className="p-10 hb">$150.00 - $200.00</p>
+              <p className="p-10 hb">$250.00 +</p>
             </div>
           </Typography>
         </AccordionDetails>
@@ -103,13 +112,21 @@ export default function ProductFilter() {
         <AccordionDetails>
           <Typography>
             <div className="container row">
-              <div className="acc-size" >XS</div>
-              <div className="acc-size">S</div>
-              <div className="acc-size">M</div>
-              <div className="acc-size">L</div>
-              <div className="acc-size">XL</div>
-              <div className="acc-size">XL</div>
-              <div className="acc-size">XL</div>
+              <Link to="/products/xs">
+                <div className="acc-size">XS</div>
+              </Link>
+              <Link to="/products/s">
+                <div className="acc-size">S</div>
+              </Link>
+              <Link to="/products/m">
+                <div className="acc-size">M</div>
+              </Link>
+              <Link to="/products/l">
+                <div className="acc-size">L</div>
+              </Link>
+              <Link to="/products/xl">
+                <div className="acc-size">XL</div>
+              </Link>
             </div>
           </Typography>
         </AccordionDetails>
@@ -126,13 +143,104 @@ export default function ProductFilter() {
         <AccordionDetails>
           <Typography>
             <div className="container row">
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
+              <div className="acc-color">
+                <Link to="/products/tan">
+                  <div
+                    className="col"
+                    style={{
+                      width: 20,
+                      height: 20,
+                      color: "red",
+                      transform:"translate(-10px,-10px)",
+                      position: "absolute",
+                    }}
+                  ></div>
+                </Link>
+              </div>
+              <div className="acc-color">
+                <Link to="/products/black">
+                  <div
+                    className="col"
+                    style={{
+                      width: 20,
+                      height: 20,
+                      color: "red",
+                      transform:"translate(-10px,-10px)",
+                      position: "absolute",
+                    }}
+                  ></div>
+                </Link>
+              </div>
+              <div className="acc-color">
+                <Link to="/products/yellow">
+                  <div
+                    className="col"
+                    style={{
+                      width: 20,
+                      height: 20,
+                      color: "red",
+                      transform:"translate(-10px,-10px)",
+                      position: "absolute",
+                    }}
+                  ></div>
+                </Link>
+              </div>
+              <div className="acc-color">
+                <Link to="/products/green">
+                  <div
+                    className="col"
+                    style={{
+                      width: 20,
+                      height: 20,
+                      color: "red",
+                      transform:"translate(-10px,-10px)",
+                      position: "absolute",
+                    }}
+                  ></div>
+                </Link>
+              </div>
+              <div className="acc-color">
+                <Link to="/products/blue">
+                  <div
+                    className="col"
+                    style={{
+                      width: 20,
+                      height: 20,
+                      color: "red",
+                      transform:"translate(-10px,-10px)",
+                      position: "absolute",
+                    }}
+                  ></div>
+                </Link>
+              </div>
+              <div className="acc-color">
+                <Link to="/products/red">
+                  <div
+                    className="col"
+                    style={{
+                      width: 20,
+                      height: 20,
+                      color: "red",
+                      transform:"translate(-10px,-10px)",
+                      position: "absolute",
+                    }}
+                  ></div>
+                </Link>
+              </div>
+              <div className="acc-color">
+                <Link to="/products/orange">
+                  <div
+                    className="col"
+                    style={{
+                      width: 20,
+                      height: 20,
+                      color: "red",
+                      transform:"translate(-10px,-10px)",
+                      position: "absolute",
+                    }}
+                  ></div>
+                </Link>
+              </div>
             </div>
           </Typography>
         </AccordionDetails>
