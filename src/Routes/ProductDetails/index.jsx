@@ -9,19 +9,7 @@ import axios from 'axios'
 
 const ProductDetails = () => {
 
-  const location = useLocation();
-  const id = location.pathname.split("/")[2];
-
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    const getProducts = async () => {
-      const res = await axios.get('http://localhost:4000/api/products')
-      setPosts(res.data);     
-    };
-
-    getProducts();
-  }, []);
+  
 
   return (
     <div>
@@ -34,21 +22,12 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {posts.map((val) => {
-              return (
-                <ProductDetail 
-                  key={val.id}
-                  id={val.id}
-                  img0={val.img[0]}
-                  img1={val.img[1]}
-                  img2={val.img[2]}
-                  img3={val.img[3]}
-                  {... val}
-                />
-              );
-            })}
+     
+              
+                <ProductDetail />
+             
 
-      <Trending/>
+      {/* <Trending/> */}
     </div>
   )
 }

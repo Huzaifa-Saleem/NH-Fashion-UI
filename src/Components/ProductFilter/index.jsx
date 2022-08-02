@@ -52,10 +52,10 @@ export default function ProductFilter() {
   return (
     <div>
       <Accordion
-        expanded={expanded === "panel0"}
-        onChange={handleChange("panel0")}
+        expanded={expanded === "panel1"}
+        onChange={handleChange("panel1")}
       >
-        <AccordionSummary aria-controls="panel0d-content" id="panel0d-header">
+        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography style={{ color: "#111111", fontWeight: "500" }}>
             CATEGORIES
           </Typography>
@@ -63,13 +63,13 @@ export default function ProductFilter() {
         <AccordionDetails>
           <Typography>
             <div className="container ">
-              <NavLink to="/products/all">
+              <NavLink to="/products">
                 <p className="p-10 hb">All</p>
               </NavLink>
               <Link to="/products/category/man">
                 <p className="p-10 hb">Man</p>
               </Link>
-              <Link to="/products/category/kids">
+              <Link to="/products/category/kid">
                 <p className="p-10 hb">Kids</p>
               </Link>
               <Link to="/products/category/woman">
@@ -80,10 +80,10 @@ export default function ProductFilter() {
         </AccordionDetails>
       </Accordion>
       <Accordion
-        expanded={expanded === "panel1"}
-        onChange={handleChange("panel1")}
+        expanded={expanded === "panel0"}
+        onChange={handleChange("panel0")}
       >
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+        <AccordionSummary aria-controls="panel0d-content" id="panel0d-header">
           <Typography style={{ color: "#111111", fontWeight: "500" }}>
             FILTER PRICE
           </Typography>
@@ -110,21 +110,21 @@ export default function ProductFilter() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography >
             <div className="container row">
-              <Link to="/products/xs">
+              <Link to="/products/size/xs">
                 <div className="acc-size">XS</div>
               </Link>
-              <Link to="/products/s">
+              <Link to="/products/size/s">
                 <div className="acc-size">S</div>
               </Link>
-              <Link to="/products/m">
+              <Link to="/products/size/m">
                 <div className="acc-size">M</div>
               </Link>
-              <Link to="/products/l">
+              <Link to="/products/size/l">
                 <div className="acc-size">L</div>
               </Link>
-              <Link to="/products/xl">
+              <Link to="/products/size/xl">
                 <div className="acc-size">XL</div>
               </Link>
             </div>
@@ -144,7 +144,7 @@ export default function ProductFilter() {
           <Typography>
             <div className="container row">
               <div className="acc-color">
-                <Link to="/products/tan">
+                <Link to="/products/color/tan">
                   <div
                     className="col"
                     style={{
@@ -158,7 +158,7 @@ export default function ProductFilter() {
                 </Link>
               </div>
               <div className="acc-color">
-                <Link to="/products/black">
+                <Link to="/products/color/black">
                   <div
                     className="col"
                     style={{
@@ -172,7 +172,7 @@ export default function ProductFilter() {
                 </Link>
               </div>
               <div className="acc-color">
-                <Link to="/products/yellow">
+                <Link to="/products/color/yellow">
                   <div
                     className="col"
                     style={{
@@ -186,7 +186,7 @@ export default function ProductFilter() {
                 </Link>
               </div>
               <div className="acc-color">
-                <Link to="/products/green">
+                <Link to="/products/color/green">
                   <div
                     className="col"
                     style={{
@@ -200,7 +200,7 @@ export default function ProductFilter() {
                 </Link>
               </div>
               <div className="acc-color">
-                <Link to="/products/blue">
+                <Link to="/products/color/blue">
                   <div
                     className="col"
                     style={{
@@ -214,7 +214,7 @@ export default function ProductFilter() {
                 </Link>
               </div>
               <div className="acc-color">
-                <Link to="/products/red">
+                <Link to="/products/color/red">
                   <div
                     className="col"
                     style={{
@@ -228,7 +228,7 @@ export default function ProductFilter() {
                 </Link>
               </div>
               <div className="acc-color">
-                <Link to="/products/orange">
+                <Link to="/products/color/orange">
                   <div
                     className="col"
                     style={{
