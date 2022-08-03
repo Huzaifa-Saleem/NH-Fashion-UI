@@ -6,7 +6,6 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import "./ProductFilter.scss";
-import CircleIcon from "@mui/icons-material/Circle";
 import { Link, NavLink } from "react-router-dom";
 
 const Accordion = styled((props) => (

@@ -38,7 +38,7 @@ const Card = (props) => {
             <h3>${props.price}</h3>
           </div>
           <div className="color d-flex ">
-            {props.col.map((c)=>
+            {props.col?.map((c)=>
             <CircleIcon style={{color:`${c}`}} key={c} className="circle" />
             )}
 
