@@ -1,0 +1,48 @@
+
+.heading{
+    display: flex;
+    margin-left: -2.55%;
+    justify-content: center;
+    background: rgb(244, 244, 244);
+    width: 105.2%;
+    border-bottom: 1px  solid rgb(228, 228, 228);
+    border-top: 1px  solid rgb(228, 228, 228);
+    color: gray;
+
+    h1{
+        margin: 10px;
+        padding: 6px;
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+input{
+    margin: 10px;
+    margin-left: 0;
+    margin-top: 0px;
+    padding: 7px;
+    width: 86%;
+    border: lightgray 1px solid;
+
+    &:focus{
+        transition: .2s all ease;
+        outline: none;
+        box-shadow: 1px 2px 20px -5px rgba(90, 90, 90, 0.21);
+-webkit-box-shadow: 1px 2px 20px -5px rgba(90, 90, 90, 0.21);
+-moz-box-shadow: 1px 2px 20px -5px rgba(90, 90, 90, 0.21);
+    }
+}
+.register{
+    margin-left: 0px;
+}
+h2{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(117, 117, 117);
+}
+label{
+    font-size: 14px;
+    color: rgb(91, 91, 91);
+    font-weight: normal;
+    margin-top: 10px;
+}

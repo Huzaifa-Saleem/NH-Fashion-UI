@@ -1,0 +1,131 @@
+@import '../../Themes/Colors.scss';
+
+.head{
+    background-color: $dark-grey;
+
+    .header{
+      display: flex;
+      font-family: 'Roboto', sans-serif;
+      margin: 0px 200px;
+      padding: 12px 0px;
+
+      .header-content{
+         flex: 50%;
+
+         p{
+            font-size: 15px;
+            color:$white;
+            margin-bottom: 0px;
+         }
+      }
+
+      .nav-link{
+         flex: 50%;
+         display: block;
+         margin: 0;
+         padding: 0;
+         text-align: end;
+
+         .link{
+            text-decoration: none;
+            color:$white;
+        }
+
+         ul{
+            display: block;
+            margin: 0px 10px 0px 0px;
+            padding: 0;
+            text-align: end;
+         span{
+            margin: 5px;
+         }
+
+            li{
+               color:$white;
+               list-style-type: none;
+               margin: 0 20px 0px 0px;
+               padding: 0;
+               display: inline;
+               font-size: 14px;
+               font-weight: 500;
+               letter-spacing: 2px;
+               position: relative;
+
+               &::after{
+                  content: " ";
+                  background-color: $pink;
+                  position: absolute;
+                  height: 2px;
+                  width: 0%;
+                  left: 0;
+                  transition: all .5s ease;
+                  bottom: -6px;
+              }
+              &:hover::after{
+                  width: 100%;
+              }
+               
+           }
+           .active::after{
+            content: " ";
+            background-color: $pink;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            left: 0;
+            transition: all .5s ease;
+            bottom: -6px;
+        }
+        }
+
+      }
+   }
+}
+@media (min-width: 1050px) and (max-width: 1200px) {
+
+   .header{
+       margin: 0px 100px;
+   }
+
+}
+// @media (min-width: 768px) and (max-width: 1050px) {
+//    .header{
+//       margin: 0px 50px;
+//    }
+// }
+@media (max-width: 1020px) {
+
+   .header{
+            margin: 0px 50px;
+         }
+
+   .head .header{
+      display: block;
+      margin: 0px ;
+
+      .header-content{
+         p{
+            text-align: center;
+            transform:translateX(-100%);
+            animation:marquee 15s linear infinite;
+            @keyframes marquee {
+               0% {
+               transform: translateX(-100%);
+               }
+               100% {
+               transform: translateX(100%);
+               }
+         }
+         
+            }
+      }
+      .nav-link{
+         ul{
+            margin-top: 7px;
+            text-align: center;
+         }
+
+      }
+   }
+  
+}

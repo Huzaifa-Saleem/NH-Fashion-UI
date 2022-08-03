@@ -1,0 +1,56 @@
+.hb{
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        color: rgb(40, 40, 40);
+    }
+}
+.acc-color{
+    // border: .5px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.108);
+    width: 1px ;
+    
+    border-radius: 50%;
+    margin: 6px;
+    padding: 7px;
+    
+
+    
+    cursor: pointer;
+
+    &:nth-child(1){
+        background-color: tan;
+    }
+    &:nth-child(2){
+        background-color: rgb(59, 59, 59);
+    }
+    &:nth-child(3){
+        background-color: yellow;
+    }
+    &:nth-child(4){
+        background-color: yellowgreen;
+    }
+    &:nth-child(5){
+        background-color: rgb(96, 96, 239);
+    }
+    &:nth-child(6){
+        background-color: rgb(238, 59, 59);
+    }
+    &:nth-child(7){
+        background-color: orange;
+    }
+}
+.acc-size{
+    border: 1px solid black;
+    width: 10px;
+    padding: 0px 20px 0px 20px ;
+    margin: 10px;
+    justify-content: center;
+    display: flex;
+    transition: all .1s ease-in-out;
+    // cursor: pointer;
+    &:hover{
+        background: black;
+        color: white;
+    }
+}

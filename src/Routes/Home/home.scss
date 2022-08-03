@@ -1,0 +1,245 @@
+@import "../../Themes/Colors.scss";
+
+body{
+    overflow-x: hidden;
+}
+
+.content{
+    h2{
+        color:$black;
+    }
+    a{
+        color:$black;
+        // padding: 3px;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 2px;
+            
+        &::after{
+        content: " ";
+        background-color: $black;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        left: 0;
+        transition: all .5s ease;
+        bottom: -6px;
+        }
+    }
+}
+
+.cloth{
+    .clothing{
+        .cont-access2{
+            display: none;
+        }
+        &:hover{
+            a::after{
+                background-color: $pink;
+                border-bottom: none;
+                width: 50%;
+             }
+        }
+        .clothing-img{
+            margin-left: -10%;
+        }   
+    }
+}
+
+.accessories{
+    margin-top: -100px;
+    &:hover{
+        a::after{
+            background-color: $pink;
+            border-bottom: none;
+            width: 50%;
+         }
+    }
+}
+
+.shoes{
+    &:hover{
+        a::after{
+            background-color: $pink;
+            border-bottom: none;
+            width: 50%;
+         }
+    }
+    .shoes-cont2{
+        display: none;
+    }
+    .shoes-img{
+        margin-left: -80px;
+    }
+}
+
+
+// .cards{
+//     margin:0px 200px;
+//     display: grid;
+//     grid-template-columns: auto auto auto auto;
+// }
+
+.sale{
+    background-color: $light-grey;
+    padding: 100px 0px;
+    
+    .collections{
+        .white-box{
+            width: 60%;
+            height: 85%;
+            content: "";
+            background-color: $white;
+        }
+    }
+    .collections-content{
+        margin-left: -80px;
+            .shoe{
+                color: rgb(167, 167, 167);
+            }
+        }
+
+    }
+    .bag{
+        p{
+            width: 100px;
+            height: 100px;
+            margin-top: -360px;
+            margin-left: 240px;
+        }
+    }
+    .sale-content{
+        .deal{
+            color: $pink;
+            letter-spacing: 2px;
+        }
+
+    }
+
+
+.instagram{
+
+    .insta-content{
+
+        h5{
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        h2{
+            color: $pink;
+        }
+    }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .shoes .shoes-img{
+        margin-left: -50px;
+    }
+    .shoes .row .shoes-cont1{
+        padding-left: 0%;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .accessories{
+        margin-top: -70px;
+    }
+
+    .sale .sale-content{
+        padding-top: 50px;
+        text-align: center;
+    }
+    .shoes .row .shoes-cont1{
+        padding-left: 10%;
+    }
+    .shoes .row .shoes-img{
+        margin-left: -50px;
+        margin-top: -70px;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .cloth .clothing .clothing-img{
+        margin-left: 0%;
+    }
+
+    .sale .sale-content{
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .instagram .insta-content{
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .sale .collections {
+        padding-bottom: 80px;
+        .white-box{
+            height: 130%;
+        }
+        .collections-content{
+            padding-top: 50px;
+        }
+    }
+
+    .sale .bag{
+        padding-top: 100px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .collections .cloth .clothing .cont-access1{
+        display: none;
+    }
+    .collections .cloth .clothing .cont-access2{
+        display: block;
+    }
+    .accessories{
+        margin-top: -0px;
+    }
+    .shoes{
+     display: block;
+     padding-right: 0px;
+    .row {
+        display: block;
+        padding-right: 0px;
+        margin-right: 0px;
+    .shoes-cont1{
+        display: none;
+    }
+    .shoes-cont2{
+        display: block;
+    }
+    .shoes-img{
+        margin-top: -0px;
+        margin-left: -0px;
+    }
+    }
+}
+
+}
+
+@media (max-width: 340px) {
+
+    .sale .bag p{
+        margin-top: -300px;
+        margin-left: 180px;
+    }
+
+}
+
+            
+
+
