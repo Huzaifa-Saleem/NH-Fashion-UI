@@ -55,10 +55,10 @@ const settings = {
 };
   return (
       <Slider {...settings}>
-        {products.img?.map(img => (
+        {products.img?.map((img,index) => (
             <img
             className="d-block w-100"
-            src={img}
+            src={img} key={index}
           />
         ))}
       </Slider>

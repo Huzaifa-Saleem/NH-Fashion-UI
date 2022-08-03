@@ -70,10 +70,10 @@ const [modalShow, setModalShow] = React.useState(false);
       </div>
 
       <div className="fw-bold d-flex align-items-center mb-4">
-      Size: &nbsp; &nbsp; {products.size?.map(size => (
-            <div>
+      Size: &nbsp; &nbsp; {products.size?.map((size,index) => (
+            <div key={index}>
               <input type="radio" id={size} name="fav_language" value={size}/>
-              <label for={size}>{size}</label>
+              <label htmlFor={size}>{size}</label>
             </div>
           ))}
       </div>
@@ -85,8 +85,8 @@ const [modalShow, setModalShow] = React.useState(false);
       />
 
       <div className="row mt-3 fw-bold d-flex align-items-center mt-4" style={{paddingLeft:12}}>
-        Color: &nbsp; {products.color?.map(color => (
-            <div className='acc-color' style={{background: color}}></div>
+        Color: &nbsp; {products.color?.map((color,index) => (
+            <div className='acc-color' style={{background: color}} key={index}></div>
           ))}
        </div>
       <div className='d-flex'>
