@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import "../Card/card.scss";
 
 const Card = (props) => {
+
   return (
     <>
     
@@ -13,9 +14,11 @@ const Card = (props) => {
         <div className="fav">
           <FavoriteBorderIcon className="heart"/>
         </div>
-        <Link to={`/productDetails/${props.id}`}><div className="img">
+        <Link to={`/productDetails/${props.id}`}>
+          <div className="img">
           <img className="img-fluid" src={props.img} alt="product" />
-        </div></Link>
+        </div>
+        </Link>
         <div className="addToCart">
           <Link className="cart" to="/addToCart">+ Add to Cart</Link>
         </div>
@@ -35,7 +38,9 @@ const Card = (props) => {
             <h3>${props.price}</h3>
           </div>
           <div className="color d-flex ">
-            <CircleIcon style={{color:`{props.col}`}} className="circle" />
+            {props.col?.map((c)=>
+            <CircleIcon style={{color:`${c}`}} key={c} className="circle" />
+            )}
 
           </div>
         </div>

@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-4">
-              <img className="logo" src="./images/logo-white.svg" alt="logo" />
+              <img className="logo" src="/images/logo-white.svg" alt="logo" />
               <p>
                 The customer is at the heart of our unique business model, which
                 includes design.

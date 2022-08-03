@@ -6,7 +6,6 @@ import { Link} from 'react-router-dom'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 const ProductDetails = () => {
-
   return (
     <div>
       <div className="p-head py-5">
