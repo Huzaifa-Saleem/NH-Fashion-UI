@@ -93,6 +93,7 @@ const Products = () => {
               return (
                 <Card
                   key={post._id}
+                  id={post._id}
                   img={post.img}
                   title={post.title}
                   price={post.price}

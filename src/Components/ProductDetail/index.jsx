@@ -1,13 +1,15 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import "../ProductDetail/productDetail.scss"
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import { Link } from "react-router-dom";
-import StarIcon from "@mui/icons-material/Star";
+import {Link, useLocation } from "react-router-dom";
+// import StarIcon from "@mui/icons-material/Star";
 import Button from '../Button';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import axios from 'axios'
+import ProductImage from '../Carousel/ProductImage';
+import SizeModal from '../SizeChart';
 
-const ProductDetail = (props) => {
+const ProductDetail = () => {
 
 const [counter, setCounter] = useState(0);
 
@@ -18,6 +20,22 @@ const down = () => {
   counter > 0 && setCounter(counter-1); 
 }
 
+const location = useLocation();
+const id = location.pathname.split("/")[2];
+
+const [products, setProducts] = useState([]);
+
+useEffect(() => {
+  const getProducts = async () => {
+    const res = await axios.get('http://localhost:4000/api/products/find/'+ id)
+    setProducts(res.data);     
+  };
+
+  getProducts();
+});
+
+const [modalShow, setModalShow] = React.useState(false);
+
   return (
     
   <div className='product-detail row'>
@@ -26,53 +44,52 @@ const down = () => {
     <section className='product-detail-images col-lg-4'>
     <div>
       <div>
-        <div className='pt-lg-5 px-lg-5'>
-          <img className='img-fluid' src={props.img0} alt="" />
+        <div className='pt-lg-5 px-lg-4'>
+          <ProductImage/>
         </div>
-        <div className='p-md-5 p-sm-4 row'>
-          <img className='img-fluid col-md-3' src={props.img0} alt="" />
-    
-          <img className='img-fluid col-md-3' src={props.img1} alt="" />
-
-          <img className='img-fluid col-md-3' src={props.img2} alt="" />
-
-          <img className='img-fluid col-md-3' src={props.img3} alt="" />
-        </div>
+        {/* <div className='p-md-4 p-sm-4 row'>
+          {products.img?.map(img => (
+            <img className='img-fluid col-md-3' src={img} alt="" />
+          ))}
+        </div> */}
       </div>
     </div>
     </section>
+    <section className='product-detail-data d-block mt-5 pt-4 ms-5 ps-5 col-lg-6'>
+      <h4 className='fs-3 fw-bold'>{products.title}</h4>
+      {/* <div className="d-flex justify-content-center">
+          <StarIcon className="star" />
+          <StarIcon className="star" />
+          <StarIcon className="star" />
+          <StarIcon className="star" />
+          <StarIcon className="star" /> &nbsp;-&nbsp; {products.reviewCount} Reviews
+      </div> */}
+      <div className='my-3'>
+        <h5 className="fs-2 fw-bold mb-0">Rs. {products.price}</h5> &nbsp; &nbsp; &nbsp;
+        {/* <p className='fs-5 fw-bold price mb-0 text-decoration-line-through'>Rs.3500</p> */}
+      </div>
 
-    <section className='product-detail-data d-block text-center my-auto py-5 col-lg-6'>
-      <h4 className='fs-3 fw-bold'>{props.title}</h4>
-      <div className="d-flex justify-content-center">
-          <StarIcon className="star" />
-          <StarIcon className="star" />
-          <StarIcon className="star" />
-          <StarIcon className="star" />
-          <StarIcon className="star" /> &nbsp;-&nbsp; {props.reviewCount} Reviews
+      <div className="fw-bold d-flex align-items-center mb-4">
+      Size: &nbsp; &nbsp; {products.size?.map(size => (
+            <div>
+              <input type="radio" id={size} name="fav_language" value={size}/>
+              <label for={size}>{size}</label>
+            </div>
+          ))}
       </div>
-      <div className='d-flex my-3 justify-content-center'>
-        <h5 className="fs-2 fw-bold mb-0">Rs. {props.price}</h5> &nbsp; &nbsp; &nbsp;
-        <p className='fs-5 fw-bold price mb-0 text-decoration-line-through'>Rs.3500</p>
-      </div>
-      <div className="container row d-flex justify-content-center">
-              <div className="acc-size">XS</div>
-              <div className="acc-size">S</div>
-              <div className="acc-size">M</div>
-              <div className="acc-size">L</div>
-              <div className="acc-size">XL</div>
-              <div className="acc-size">XXL</div>
-      </div>
-      <div className="container row d-flex justify-content-center mt-3">
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
-                <div className="acc-color"></div>
+
+      <h5 className='size fw-bold' onClick={() => setModalShow(true)}>Size Chart</h5>
+      <SizeModal
+      show={modalShow}
+      onHide={() => setModalShow(false)}
+      />
+
+      <div className="row mt-3 fw-bold d-flex align-items-center mt-4" style={{paddingLeft:12}}>
+        Color: &nbsp; {products.color?.map(color => (
+            <div className='acc-color' style={{background: color}}></div>
+          ))}
        </div>
-      <div className='d-flex justify-content-center'>
+      <div className='d-flex'>
         <div className='d-flex counter justify-content-end'>
           <p className='fs-6 fw-bold text-black mt-2'>{counter} &nbsp; &nbsp;</p>
           <div className='me-2 d-flex flex-column'>
@@ -84,13 +101,23 @@ const down = () => {
         &nbsp; &nbsp; &nbsp;
         <div><Button title="ADD TO CART"/></div>
       </div>
-      <div className='checkout'>
+      {/* <div className='checkout'>
         <h5 className='fs-5 fw-bold mt-5 mb-4'> <span className='px-4 bg-white'>Guranteed Safe Checkout</span></h5>
         <img src="/images/checkout.png" alt="" />
+      </div> */}
+      <div className='mt-4 pt-2'>
+        {/* <p className='mb-1'>SKU: <span className='text-black'></span></p> */}
+        {/* <p className='mb-1'>Catagory: <span className='text-black'>{products.categories}</span></p> */}
+        {/* <p className='mb-1'>Tags: <span className='text-black'></span></p> */}
+      </div>
+      <div>
+      </div>
+      <div className='text-start mt-5'>
+        <h5 className='fw-bold text-black '>Product Description</h5>
+        <p className='text-black mt-3 me-5'>{products.desc}</p>
       </div>
     </section>
     <div className='col-lg-1'></div>
-
   </div>
   )
 }

@@ -1,16 +1,26 @@
-import React, { Component } from "react";
+import React, {useEffect, useState} from "react";
 import Slider from "react-slick";
 import "../Carousel/trending.scss";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import data from "../Card/data";
+import axios from "axios";
 import Card from "../Card";
 
 
-export default class Trending extends Component {
+const Trending = () => {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const res = await axios.get('http://localhost:4000/api/products')
+      setProducts(res.data);     
+    };
   
-  render() {
-    var settings = {
+    getProducts();
+  });  
+
+    const settings = {
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -50,10 +60,11 @@ export default class Trending extends Component {
           <h6 className="deal fs-6 fw-bold mt-5 mb-3">NH FASHION</h6>
           <h2 className="fs-1 fw-bold text-black">Trending Products</h2></div>
         <Slider {...settings} className="ms-sm-5 ms-3 cards py-5">
-        {data.map((val) => {
+        {products?.map((val) => {
               return (
                 <Card className="img-fluid"
-                  key={val.id}
+                  key={val._id}
+                  id={val._id}
                   img={val.img}
                   title={val.title}
                   price={val.price}
@@ -64,4 +75,6 @@ export default class Trending extends Component {
       </div>
     );
   }
-}
+
+
+export default Trending

@@ -11,6 +11,36 @@
         .p{
             margin: 0 25%;
         }
+
+        input[type="radio"]{
+        -webkit-appearance: none;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+        }
+        label{
+            border: 1px solid black;
+            color: black;
+            width: 10px;
+            font-weight: bold;
+            padding: 1px 20px 1px 20px ;
+            margin-right: 20px;
+            margin-top: -53px;
+            justify-content: center;
+            display: flex;
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+        }
+        input[type="radio"]:checked + label{
+            background-color: black;
+            color: white;
+        }
+
+        .size{
+           border-bottom: 2px solid black;
+           cursor: pointer;
+           width: fit-content;
+        }
         .price{
         color: rgb(172, 172, 172);
         }
@@ -39,6 +69,7 @@
         }
     }
 }
+
 
 @media (max-width: 1000px){
     .product-detail {

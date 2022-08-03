@@ -1,27 +1,11 @@
 import React from 'react'
-import { useState,useEffect } from 'react'
 import "../ProductDetails/productDetails.scss"
 import Trending from '../../Components/Carousel/Trending'
 import ProductDetail from '../../Components/ProductDetail/index'
-import { Link, useLocation } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import axios from 'axios'
 
 const ProductDetails = () => {
-
-  const location = useLocation();
-  const id = location.pathname.split("/")[2];
-
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    const getProducts = async () => {
-      const res = await axios.get('http://localhost:4000/api/products')
-      setPosts(res.data);     
-    };
-
-    getProducts();
-  }, []);
 
   return (
     <div>
@@ -34,21 +18,14 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {posts.map((val) => {
-              return (
-                <ProductDetail 
-                  key={val.id}
-                  id={val.id}
-                  img0={val.img[0]}
-                  img1={val.img[1]}
-                  img2={val.img[2]}
-                  img3={val.img[3]}
-                  {... val}
-                />
-              );
-            })}
+      <section className='my-5'>
+       <ProductDetail/>
+      </section> 
 
-      <Trending/>
+      <section className='container my-5 py-4'>
+        <Trending/>
+      </section>
+
     </div>
   )
 }
