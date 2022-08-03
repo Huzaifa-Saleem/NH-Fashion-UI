@@ -2,7 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import "../ProductDetails/productDetails.scss"
 import Trending from '../../Components/Carousel/Trending'
-import ProductDetail from '../../Components/ProductDetail/index'
+// import ProductDetail from '../../Components/ProductDetail/index'
 import { Link, useLocation } from 'react-router-dom'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import axios from 'axios'
@@ -24,7 +24,7 @@ const ProductDetails = () => {
 
      
               
-                <ProductDetail />
+                {/* <ProductDetail /> */}
              
 
       {/* <Trending/> */}
