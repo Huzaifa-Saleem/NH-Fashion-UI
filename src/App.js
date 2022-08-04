@@ -9,6 +9,7 @@ import Header from "./Components/Header";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import ProductDetails from "./Routes/ProductDetails";
+import AddToCart from "./Routes/AddToCart";
 const App = () => {
   return (
     
@@ -24,6 +25,7 @@ const App = () => {
           <Route exact path="/products" element={<Products/>} />
           <Route exact path="/contact" element={<Contact/>} />
           <Route exact path="/productDetails/:id" element={<ProductDetails/>} />
+          <Route exact path="/cart" element={<AddToCart/>} />
       </Routes>
       <Footer/>
       </Router>

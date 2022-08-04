@@ -1,0 +1,21 @@
+@import "../../Themes/Colors.scss";
+
+.cart-head{
+    border-bottom: 1px solid $light-grey;
+}
+.cart-content{
+    border-bottom: 1px solid $light-grey;
+    .close{
+        background-color: $light-grey;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+}
+.cart{
+    background-color: $light-grey;
+    h5{
+        color: $pink;
+    }
+}

@@ -12,7 +12,7 @@ const ProductDetails = () => {
         <div className='container'>
           <h2 style={{ color: "#111111", fontWeight: "bold" }}>Product Detail</h2>
           <p className='mb-0'>
-            <Link to="/productDetail">Home</Link> <KeyboardArrowRightIcon sx={{ fontSize: 16, color:"black", marginTop:-0.5,}}/><Link to="/products">Products</Link> <KeyboardArrowRightIcon sx={{ fontSize: 16, color:"black", marginTop:-0.5,}}/> Product Detail
+            <Link to="/">Home</Link> <KeyboardArrowRightIcon sx={{ fontSize: 16, color:"black", marginTop:-0.5,}}/><Link to="/products">Products</Link> <KeyboardArrowRightIcon sx={{ fontSize: 16, color:"black", marginTop:-0.5,}}/> Product Detail
           </p>
         </div>
       </div>

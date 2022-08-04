@@ -49,13 +49,13 @@ if (isLoading) {
   );
 }
   return (
-    
+  <>  
   <div className='product-detail row'>
 
-    <div className='col-lg-1'></div>
-    <section className='product-detail-images col-lg-4'>
+    <div className='col-md-1'></div>
+    <section className='product-detail-images col-md-4'>
     <div>
-      <div>
+      <div className='grid'>
         <div className='pt-lg-5 px-lg-4'>
           <ProductImage products={products}/>
         </div>
@@ -63,7 +63,7 @@ if (isLoading) {
       </div>
     </div>
     </section>
-    <section className='product-detail-data d-block mt-5 pt-4 ms-5 ps-5 col-lg-6'>
+    <section className='product-detail-data d-block mt-lg-5 pt-3 pt-xl-4 ms-sm-5 ms-4 ps-sm-5 col-md-6'>
       <h4 className='fs-3 fw-bold'>{products.title}</h4>
       
       <div className='my-3'>
@@ -90,7 +90,7 @@ if (isLoading) {
             <div className='acc-color' style={{background: color}} key={index}></div>
           ))}
        </div>
-      <div className='d-flex'>
+      <div className='d-sm-flex'>
         <div className='d-flex counter justify-content-end'>
           <p className='fs-6 fw-bold text-black mt-2'>{counter} &nbsp; &nbsp;</p>
           <div className='me-2 d-flex flex-column'>
@@ -99,20 +99,25 @@ if (isLoading) {
             <KeyboardArrowDownIcon sx={{fontSize:20}} onClick={down}/>
           </div>
         </div>
-        &nbsp; &nbsp; &nbsp;
-        <div><Button title="ADD TO CART"/></div>
+        <div className='d-none d-sm-block'>&nbsp; &nbsp; &nbsp;</div>
+        <div><Button title="ADD TO CART" src="/cart"/></div>
       </div>
       <div className='mt-4 pt-2'>
       </div>
       <div>
       </div>
-      <div className='text-start mt-5'>
+      <div className='pro-desc text-start mt-5'>
         <h5 className='fw-bold text-black '>Product Description</h5>
         <p className='text-black mt-3 me-5'>{products.desc}</p>
       </div>
     </section>
-    <div className='col-lg-1'></div>
+    <div className='col-md-1'></div>
   </div>
+  <div className='pro-desc1 text-start ms-sm-5 ms-4 me-sm-5 mb-5 mt-sm-5 mt-3 px-sm-4'>
+    <h5 className='fw-bold text-black '>Product Description</h5>
+    <p className='text-black mt-3 me-5'>{products.desc}</p>
+  </div>
+  </>
   )
 }
 
