@@ -20,7 +20,7 @@ const Card = (props) => {
         </div>
         </Link>
         <div className="addToCart">
-          <Link className="cart" to="/addToCart">+ Add to Cart</Link>
+          <Link className="cart" to="/cart">+ Add to Cart</Link>
         </div>
         <div className="title">
           <h4>{props.title}</h4>
