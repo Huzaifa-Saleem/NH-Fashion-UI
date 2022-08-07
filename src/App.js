@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./Routes/Home/index";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Products from "./Routes/Products"
 import Contact from "./Routes/Contact"
 import Authentication from "./Routes/Authentication";
@@ -12,14 +12,14 @@ import ProductDetails from "./Routes/ProductDetails";
 import AddToCart from "./Routes/AddToCart";
 const App = () => {
   return (
-    
-      <Router>
+    <BrowserRouter>
+      
         <Header/>
         <Navbar/>
         
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/authentication" element={<Authentication />} />
+         <Route  path="/" element={<Home />} />
+           <Route exact path="/authentication" element={<Authentication />} />
           <Route exact path="/products/:cat/:value" element={<Products/>} />
           <Route exact path="/products/:fil" element={<Products/>} />
           <Route exact path="/products" element={<Products/>} />
@@ -28,7 +28,8 @@ const App = () => {
           <Route exact path="/cart" element={<AddToCart/>} />
       </Routes>
       <Footer/>
-      </Router>
+      
+      </BrowserRouter>
 
     
   );
