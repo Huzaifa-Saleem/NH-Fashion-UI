@@ -95,7 +95,7 @@ const Products = () => {
       setFilteredPosts(item)
     }
     searchItems()
-  },[search])
+  },[search,posts])
 
   //current post
   const indexOfLastPost = curretnPage * postPerPage;
@@ -183,7 +183,7 @@ const Products = () => {
               );
             })}
 
-            {filteredPosts.length === 0 ? <p>No Products</p> : null}
+            {filteredPosts.length === 0 ? <span>No Products</span> : null}
           </div>
         </div>
         <div className="col-lg-1"></div>

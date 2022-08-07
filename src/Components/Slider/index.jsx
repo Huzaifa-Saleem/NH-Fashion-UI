@@ -19,7 +19,7 @@ export default class PauseOnHover extends Component {
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 8000,
-      pauseOnHover: false
+      pauseOnHover: true
     };
 
     return (
@@ -31,7 +31,7 @@ export default class PauseOnHover extends Component {
                 <h5>SUMMER COLLECTION</h5>
                 <h1 className='my-4'> <b> <span> Celebrate </span><br /> Summer - 2022 </b></h1>
                 <p className='mb-4'>A specialist label creating luxury essentials. <br/> Ethically crafted with an unwavering commitment to exceptional quality.</p>
-                <Button title='SHOP NOW' src='/products'/> 
+                <Button src='/' title='SHOP NOW' /> 
           
             </div>
             <div className="icons">
@@ -52,7 +52,7 @@ export default class PauseOnHover extends Component {
                 <h5>EID COLLECTION</h5>
                 <h1 className='my-4'> <b> <span> Celebrate </span><br /> Summer - 2022 </b></h1>
                 <p className='mb-4'>A specialist label creating luxury essentials. Ethically crafted <br /> with an unwavering commitment to exceptional quality.</p>
-                <Button src="/products" title='SHOP NOW'/>
+                <Button src='/' title='SHOP NOW'/>
            </div>
            <div className="icons">
                 <ul>

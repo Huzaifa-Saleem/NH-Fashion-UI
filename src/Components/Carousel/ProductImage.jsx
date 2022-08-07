@@ -1,6 +1,3 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import Slider from "react-slick";
 import "../Carousel/trending.scss";
 import "slick-carousel/slick/slick.css"; 
@@ -29,20 +26,8 @@ function SamplePrevArrow(props) {
 }
 
 
-function ProductImage() {
+function ProductImage(props) {
 
-const location = useLocation();
-const id = location.pathname.split("/")[2];
-const [products, setProducts] = useState([]);
-
-useEffect(() => {
-  const getProducts = async () => {
-    const res = await axios.get('http://localhost:4000/api/products/find/'+ id)
-    setProducts(res.data);     
-  };
-
-  getProducts();
-});
 
 const settings = {
   infinite: true,
@@ -55,10 +40,10 @@ const settings = {
 };
   return (
       <Slider {...settings}>
-        {products.img?.map((img,index) => (
+        {props.products.img?.map((img,index) => (
             <img
             className="d-block w-100"
-            src={img} key={index}
+            src={img} key={index} alt='product-img'
           />
         ))}
       </Slider>

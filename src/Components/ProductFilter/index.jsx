@@ -6,7 +6,6 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import "./ProductFilter.scss";
-import CircleIcon from "@mui/icons-material/Circle";
 import { Link, NavLink } from "react-router-dom";
 
 const Accordion = styled((props) => (
@@ -39,7 +38,7 @@ const AccordionSummary = styled((props) => (
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  //   borderBottom: "1px solid rgba(0, 0, 0, .125)",
+
 }));
 
 export default function ProductFilter() {
@@ -50,7 +49,7 @@ export default function ProductFilter() {
   };
 
   return (
-    <div>
+    <>
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
@@ -61,45 +60,25 @@ export default function ProductFilter() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography component={"span"} variant={"body2"}>
             <div className="container ">
-              <NavLink to="/products">
-                <p className="p-10 hb">All</p>
-              </NavLink>
+              <Link to="/products">
+                <div style={{color:'gray', margin:10,padding:3}} className="p-10  hb">All</div>
+              </Link>
               <Link to="/products/category/man">
-                <p className="p-10 hb">Man</p>
+                <div style={{color:'gray', margin:10,padding:3}} className="p-10 hb">Man</div>
               </Link>
               <Link to="/products/category/kid">
-                <p className="p-10 hb">Kids</p>
+                <div style={{color:'gray', margin:10,padding:3}} className="p-10 hb">Kids</div>
               </Link>
               <Link to="/products/category/woman">
-                <p className="p-10 hb">Woman</p>
+                <div style={{color:'gray', margin:10,padding:3}} className="p-10 hb">Woman</div>
               </Link>
             </div>
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion
-        expanded={expanded === "panel0"}
-        onChange={handleChange("panel0")}
-      >
-        <AccordionSummary aria-controls="panel0d-content" id="panel0d-header">
-          <Typography style={{ color: "#111111", fontWeight: "500" }}>
-            FILTER PRICE
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            <div className="container ">
-              <p className="p-10 hb">$0.00 - $50.00</p>
-              <p className="p-10 hb">$50.00 - $100.00</p>
-              <p className="p-10 hb">$100.00 - $150.00</p>
-              <p className="p-10 hb">$150.00 - $200.00</p>
-              <p className="p-10 hb">$250.00 +</p>
-            </div>
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+     
       <Accordion
         expanded={expanded === "panel2"}
         onChange={handleChange("panel2")}
@@ -110,7 +89,7 @@ export default function ProductFilter() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography >
+          <Typography component={"span"} variant={"body2"}>
             <div className="container row">
               <Link to="/products/size/xs">
                 <div className="acc-size">XS</div>
@@ -141,7 +120,7 @@ export default function ProductFilter() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography component={"span"} variant={"body2"}>
             <div className="container row">
               <div className="acc-color">
                 <Link to="/products/color/tan">
@@ -245,6 +224,6 @@ export default function ProductFilter() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-    </div>
+    </>
   );
 }

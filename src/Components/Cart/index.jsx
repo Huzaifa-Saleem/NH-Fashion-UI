@@ -6,13 +6,13 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import CloseIcon from "@mui/icons-material/Close";
 
 const Cart = () => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(1);
 
   const up = () => {
     setCounter(counter + 1);
   };
   const down = () => {
-    counter > 0 && setCounter(counter - 1);
+    counter > 1 && setCounter(counter - 1);
   };
 
   return (

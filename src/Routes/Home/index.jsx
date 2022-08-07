@@ -127,7 +127,7 @@ return (
       <h4 className="fs-2 fw-bold">Bags Collection</h4>
       <p className="time fs-1 fw-bold text-black mt-4">{timerDays} &nbsp;:&nbsp; {timerHours} &nbsp;:&nbsp; {timerMinutes} &nbsp;:&nbsp; {timerSeconds} </p>
       <p className="days">Days <span className="me-md-5 me-3"></span> Hours <span className="me-md-5 me-3"></span> Minutes <span className="me-md-5 me-3"></span> Seconds</p>
-      <Button title='SHOP NOW' src='/products'/>
+      <Button src='/' title='SHOP NOW'/>
     </div>
   </div>
   </section>
