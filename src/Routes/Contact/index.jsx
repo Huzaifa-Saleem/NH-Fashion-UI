@@ -77,7 +77,7 @@ const Contact = () => {
                 }
                 style={{ height: 100, width: "86%", padding: "7px" }}
               ></textarea>
-              <Button title='SEND MESSAGE' />
+              <Button title='SEND MESSAGE' src='/'/>
             </form>
           </div>
         </div>

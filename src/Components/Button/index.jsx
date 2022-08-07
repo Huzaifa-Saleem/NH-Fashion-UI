@@ -4,11 +4,11 @@ import "../Button/button.scss"
 
 const Button = (props) => {
   return (
-    <Link to={props.src}><button className='btn11'>
-       
-           {props.title}
-       
-    </button></Link>
+    <div className='btn11'>
+      <Link to={props.src} className="btn1">   
+        {props.title}
+      </Link>
+    </div>
   )
 }
 

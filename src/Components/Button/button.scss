@@ -1,8 +1,8 @@
 @import "../../Themes/Colors.scss";
 .btn11{
-    padding: 0px;
-    margin-top: 25px;
-    &{
+    margin-top: 35px;
+    .btn1{
+        padding: 0px;
         color: $white;
         background-color: $black;
         padding: 12px 22px;
@@ -11,9 +11,10 @@
         text-decoration: none;
         letter-spacing: 2px;
         border: none;
-
-        &:hover{
-            box-shadow:rgba(184, 181, 181,0.7) 0px 2px 5px ;
-        }
+    
+            &:hover{
+                color: $white;
+                box-shadow:rgba(184, 181, 181,0.7) 0px 2px 5px ;
+            }
     }
 }

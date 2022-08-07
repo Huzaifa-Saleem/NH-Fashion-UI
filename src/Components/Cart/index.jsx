@@ -17,13 +17,13 @@ const Cart = () => {
 
   return (
     <div>
-          <div className="cart-content row me-0">
+          <div className="cart-content d-flex me-0">
             <div className="col-md-5 row py-3 my-2">
               <div className="col-md-3">
                 <img src="/images/clothing.webp" className="img-fluid" alt="" />
               </div>
               <div className="col-md-9 d-flex justify-content-center flex-column ">
-                <p className="text-black ms-4 mb-2">Balloon Fit Jeans </p>
+                <p className="text-black ms-4 mb-2">Balloon Fit Jeans <span className="fw-bold"> &nbsp; -  &nbsp; XS </span></p>
                 <h6 className="fs-5 fw-bold ms-4 mb-0">Rs. 150</h6>
               </div>
             </div>

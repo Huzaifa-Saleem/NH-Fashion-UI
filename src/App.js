@@ -10,6 +10,9 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import ProductDetails from "./Routes/ProductDetails";
 import AddToCart from "./Routes/AddToCart";
+import Checkout from "./Routes/Checkout";
+import Payment from "./Routes/Payment";
+import ConfirmOrder from "./Routes/ConfirmOrder";
 const App = () => {
   return (
     
@@ -26,6 +29,9 @@ const App = () => {
           <Route exact path="/contact" element={<Contact/>} />
           <Route exact path="/productDetails/:id" element={<ProductDetails/>} />
           <Route exact path="/cart" element={<AddToCart/>} />
+          <Route exact path="/checkout" element={<Checkout/>} />
+          <Route exact path="/payment" element={<Payment/>} />
+          <Route exact path="/confirmOrder" element={<ConfirmOrder/>} />
       </Routes>
       <Footer/>
       </Router>
