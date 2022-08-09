@@ -13,6 +13,7 @@ import AddToCart from "./Routes/AddToCart";
 import Checkout from "./Routes/Checkout";
 import Payment from "./Routes/Payment";
 import ConfirmOrder from "./Routes/ConfirmOrder";
+import Wishlist from "./Routes/Wishlist";
 const App = () => {
   return (
     <BrowserRouter>
@@ -32,6 +33,7 @@ const App = () => {
           <Route exact path="/checkout" element={<Checkout/>} />
           <Route exact path="/payment" element={<Payment/>} />
           <Route exact path="/confirmOrder" element={<ConfirmOrder/>} />
+          <Route exact path="/wishlist" element={<Wishlist/>} />
       </Routes>
       <Footer/>
       
