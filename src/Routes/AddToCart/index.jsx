@@ -3,8 +3,15 @@ import Cart from "../../Components/Cart";
 import { Link } from "react-router-dom";
 import "../AddToCart/addToCart.scss";
 import Button from "../../Components/Button";
+import { useSelector } from "react-redux";
+import StripeCheckout from "react-stripe-checkout";
+
+const KEY = process.env.REACT_STRIPE_CHECKOUT;
 
 const AddToCart = () => {
+  const cart = useSelector((state) => state.cart);
+
+
   return (
     <div>
       <div className="p-head py-5">
@@ -38,8 +45,16 @@ const AddToCart = () => {
               <h6 className="fw-bold fs-6 col-md-3 text-center">TOTAL</h6>
               <div className="col-md-1"></div>
             </div>
-            <Cart />
-            <Cart />
+            {cart.products.map((product) => (
+              <Cart
+                
+                img={product.img}
+                title={product.title}
+                price={product.price * product.counter}
+                counter={product.counter}
+                size={product.size}
+              />
+            ))}
             <div className="mt-3">
               <Button title="CONTINUE SHIPPING" src="/products" />
             </div>
@@ -50,16 +65,16 @@ const AddToCart = () => {
               <h6 className="fw-bold fs-6 mb-5">CART TOTAL</h6>
               <div className="d-flex justify-content-between">
                 <p className="fs-6 text-black">SubTotal</p>
-                <h5 className="fs-5 fw-bold">Rs. 150</h5>
+                <h5 className="fs-5 fw-bold">$ {cart.total}</h5>
               </div>
               <div className="d-flex total justify-content-between ">
                 <p className="fs-6 text-black mb-2">Shipping</p>
-                <h5 className="fs-5 fw-bold mb-2">Rs. 100</h5>
+                <h5 className="fs-5 fw-bold mb-2">$ 100</h5>
               </div>
               <hr />
               <div className="d-flex justify-content-between mt-4">
                 <p className="fs-6 text-black mb-0">Total</p>
-                <h5 className="fs-5 fw-bold mb-0">Rs. 250</h5>
+                <h5 className="fs-5 fw-bold mb-0">$ {cart.total + 100}</h5>
               </div>
               <div className="d-flex justify-content-center mt-4">
                 <Button title="PROCEED TO CHECKOUT" src="/checkout" />

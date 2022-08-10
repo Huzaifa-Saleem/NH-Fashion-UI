@@ -14,6 +14,7 @@ const ProductDetail = () => {
   const dispatch = useDispatch();
   const [counter, setCounter] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
+  const [size, setSize] = useState("");
 
   const up = () => {
     setCounter(counter + 1);
@@ -43,10 +44,7 @@ const ProductDetail = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
   const handleAddToCart = () => {
-    dispatch(
-      addProduct({ products, counter, price: products.price * counter })
-    );
-    
+    dispatch(addProduct({ ...products, counter, size }));
   };
 
   if (isLoading) {
@@ -88,6 +86,8 @@ const ProductDetail = () => {
                   id={size}
                   name="fav_language"
                   value={size}
+                  onChange={(e) => setSize(e.target.value)}
+                  required
                 />
                   <label htmlFor={size}>{size}</label>
               </div>
