@@ -1,16 +1,42 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Cart from "../../Components/Cart";
 import { Link } from "react-router-dom";
 import "../AddToCart/addToCart.scss";
 import Button from "../../Components/Button";
 import { useSelector } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
+import {userRequest} from "../../redux/requestMethods";
+import { useNavigate } from "react-router-dom";
 
-const KEY = process.env.REACT_STRIPE_CHECKOUT;
+const KEY = "pk_test_51LVDHLAqGbI5WtKTFLofZqCHZcu7quyAXHXuk0N1UHClvxO2Vi9pan8oGrGfUpcNuJfFSTOcPrGcoOrM1BDQYnUd00K6Jm5v6c"
 
 const AddToCart = () => {
+
   const cart = useSelector((state) => state.cart);
 
+  const [stripeToken, setStripeToken] =useState(null)
+
+  const navigate = useNavigate();
+
+  const onToken = (token) => {
+     setStripeToken(token);
+  }
+
+  useEffect(() => {
+    const makeRequest = async () => {
+      try{
+const res = await userRequest.post ("/checkout/payment",{
+  tokenId: stripeToken.id,
+  amount: cart.total*100
+});
+navigate.push("/success", {data:res.data});
+      }
+      catch{
+
+      }
+    };
+    stripeToken && makeRequest();
+  }, [stripeToken, cart.total,navigate])
 
   return (
     <div>
@@ -47,7 +73,6 @@ const AddToCart = () => {
             </div>
             {cart.products.map((product) => (
               <Cart
-                
                 img={product.img}
                 title={product.title}
                 price={product.price * product.counter}
@@ -77,7 +102,34 @@ const AddToCart = () => {
                 <h5 className="fs-5 fw-bold mb-0">$ {cart.total + 100}</h5>
               </div>
               <div className="d-flex justify-content-center mt-4">
-                <Button title="PROCEED TO CHECKOUT" src="/checkout" />
+                <StripeCheckout
+                  name="Three Comma Co."
+                  description="Big Data Stuff" 
+                  // image="https://www.vidhub.co/assets/logos/vidhub-icon-2e5c629f64ced5598a56387d4e3d0c7c.png" 
+                  // ComponentClass="div"
+                  // panelLabel="Give Money" 
+                  amount={cart.total*100} 
+                  // currency="USD"
+                  // stripeKey="..."
+                  // locale="zh"
+                  // email="info@vidhub.co"
+                  shippingAddress
+                  billingAddress
+                  // zipCode={false}
+                  // alipay 
+                  // bitcoin 
+                  // allowRememberMe 
+                  token={onToken} 
+                  stripeKey={KEY}
+                  // opened={this.onOpened} 
+                  // closed={this.onClosed} 
+                  // reconfigureOnUpdate={false}
+                  // triggerEvent="onTouchTap"
+                >
+                  <button>CHECKOUT</button>
+                  {/* <Button title="PROCEED TO CHECKOUT" src="" /> */}
+                </StripeCheckout>
+                
               </div>
             </div>
           </div>

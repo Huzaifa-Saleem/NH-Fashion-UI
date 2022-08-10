@@ -14,6 +14,7 @@ import Checkout from "./Routes/Checkout";
 import Payment from "./Routes/Payment";
 import ConfirmOrder from "./Routes/ConfirmOrder";
 import Wishlist from "./Routes/Wishlist";
+import Success from "./Routes/Success/Success";
 const App = () => {
   return (
     <BrowserRouter>
@@ -34,6 +35,7 @@ const App = () => {
           <Route exact path="/payment" element={<Payment/>} />
           <Route exact path="/confirmOrder" element={<ConfirmOrder/>} />
           <Route exact path="/wishlist" element={<Wishlist/>} />
+          <Route exact path="/success" element={<Success/>} />
       </Routes>
       <Footer/>
       
