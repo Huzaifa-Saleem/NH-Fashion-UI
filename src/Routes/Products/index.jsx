@@ -177,8 +177,7 @@ const Products = () => {
                   title={post.title}
                   price={post.price}
                   col={post.color}
-
-                  // col={post.color[2]}
+                  product={post}
                 />
               );
             })}

@@ -71,8 +71,9 @@ navigate.push("/success", {data:res.data});
               <h6 className="fw-bold fs-6 col-md-3 text-center">TOTAL</h6>
               <div className="col-md-1"></div>
             </div>
-            {cart.products.map((product) => (
+            {cart.products?.map((product) => (
               <Cart
+                product={product}
                 img={product.img}
                 title={product.title}
                 price={product.price * product.counter}

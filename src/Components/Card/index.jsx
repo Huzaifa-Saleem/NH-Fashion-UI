@@ -4,15 +4,25 @@ import CircleIcon from "@mui/icons-material/Circle";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Link } from "react-router-dom";
 import "../Card/card.scss";
+import { useDispatch } from "react-redux";
+import { addFavProduct, productFavRemoval } from "../../redux/favSlice";
 
 const Card = (props) => {
+
+  const dispatch = useDispatch()
+  const products = props.product
+
+  const handleFav = (e)=>{
+    dispatch(addFavProduct({...products}))
+
+  }
 
   return (
     <>
     
       <div className=" productCard">
         <div className="fav">
-          <FavoriteBorderIcon className="heart"/>
+          <FavoriteBorderIcon onClick={handleFav} className="heart"/>
         </div>
         <Link to={`/productDetails/${props.id}`}>
           <div className="img">

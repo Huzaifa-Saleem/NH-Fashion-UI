@@ -1,6 +1,6 @@
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Authentication from '../../Routes/Authentication';
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Authentication from "../../Routes/Authentication";
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -10,16 +10,16 @@ function MyVerticallyCenteredModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
-        
-      </Modal.Header>
+      <Modal.Header closeButton></Modal.Header>
       <Modal.Body>
-        <Authentication/>
+        <Authentication onHide={props.onHide} />
       </Modal.Body>
       <Modal.Footer>
-        <Button variant='dark' onClick={props.onHide}>Close</Button>
+        <Button variant="dark" onClick={props.onHide}>
+          Close
+        </Button>
       </Modal.Footer>
     </Modal>
   );
 }
-export default MyVerticallyCenteredModal
+export default MyVerticallyCenteredModal;

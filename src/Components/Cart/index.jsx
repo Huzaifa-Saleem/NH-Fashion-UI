@@ -4,16 +4,26 @@ import "../Cart/cart.scss";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import CloseIcon from "@mui/icons-material/Close";
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct, removeProduct } from "../../redux/cartSlice";
 
 const Cart = (props) => {
-  const [counter, setCounter] = useState(1);
+  const dispatch = useDispatch()
+  // const [counter, setCounter] = useState(1);
+const counter = useSelector((state=>state.cart.products.counter))
+  const handleUp = () => {
+    // dispatch(addProduct({counter }))
+    console.log(counter)
+  };
+  const handleDown = () => {
+    
+  };
+    const products = props.product 
 
-  const up = () => {
-    setCounter(counter + 1);
-  };
-  const down = () => {
-    counter > 1 && setCounter(counter - 1);
-  };
+  const handleRemove = (e)=>{
+    e.preventDefault()
+    dispatch(removeProduct({ ...products}))
+  }
 
   return (
     <div>
@@ -29,11 +39,11 @@ const Cart = (props) => {
             </div>
             <div className="col-md-3 d-flex align-items-center  justify-content-center">
               <div className="d-flex counter">
-                <KeyboardArrowLeftIcon sx={{ fontSize: 25 }} onClick={down} />
+                <KeyboardArrowLeftIcon sx={{ fontSize: 25 }} onClick={handleDown} />
                 <p className="fs-5 fw-bold text-black mx-3 mb-0 text-center">
                   {props.counter}
                 </p>
-                <KeyboardArrowRightIcon sx={{ fontSize: 25 }} onClick={up} />
+                <KeyboardArrowRightIcon sx={{ fontSize: 25 }} onClick={handleUp} />
               </div>
             </div>
             <div className="col-md-3 d-flex align-items-center justify-content-center">
@@ -41,7 +51,7 @@ const Cart = (props) => {
             </div>
             <div className="col-md-1 pe-3 d-flex align-items-center justify-content-end">
               <div className="close d-flex align-items-center justify-content-center">
-                <CloseIcon sx={{ fontSize: 20 }} />
+                <CloseIcon onClick={handleRemove} sx={{ fontSize: 20 }} />
               </div>
             </div>
           </div>
