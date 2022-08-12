@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 
 const Wishlist = () => {
   const fav = useSelector((state)=>state.fav)
+
   return (
     <div className='mb-5 pb-5'>
       <div className="mb-4">
@@ -14,7 +15,8 @@ const Wishlist = () => {
         <h3 className='text-center fs-2 fw-bold text-black mt-2 '>My Wishlist</h3>
         </div>
       </div>
-      {fav.products?.map((product)=>
+      {fav.quantity === 0 ? (<p className='d-flex justify-content-center align-items-center m-30'>your fav is empty</p>) :  (
+      <>{fav.products?.map((product)=>
       <WishlistCard
       img={product.img}
       title={product.title}
@@ -25,6 +27,8 @@ const Wishlist = () => {
 
 
     <Link to='/'><p className='text-black text-center fs-6 mt-5'>Share my wishlist on &nbsp; <WhatsAppIcon/></p></Link>
+    </>
+     )} 
     </div>
   )
 }
