@@ -42,10 +42,10 @@ const Authentication = (props) => {
   const handleLogin = (e) => {
     e.preventDefault();
     login(dispatch, { username: loginUsername, password: loginPassword });
-  };
   if(error){
     toast.error('Something Went Wrong')
-  }
+  }};
+  
 
   if (user) {
     navigate("/");
