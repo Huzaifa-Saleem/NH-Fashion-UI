@@ -23,20 +23,24 @@ const Navbar = () => {
   const showSidebar = () => setShowMenu(!showMenu);
 
   return (
-    <div className="container">
-      <div className="navbar mx-md-5">
+    <div className={!showMenu && "container"}>
+      <div className={showMenu ? "navbar mx-0 p-5" : "navbar mx-md-5"}>
         <div className="nav-logo">
           <Link to="/">
             <img className="logo-img" src="/images/logo.svg" alt="" />
           </Link>
         </div>
         <div className={showMenu ? "nav-link" : "nav-links"}>
-          <button>
+          <div className="d-flex justify-content-between align-content-center px-5">
+          <div>{showMenu && <img src="/images/logo-white.svg" alt="" width={150} />}</div>
+          <button className="close-icon">
             <CloseIcon
-              sx={{ fontSize: 30, color: "white" }}
+              sx={{ fontSize: 30, color: "white", marginRight:0,}}
               onClick={showSidebar}
             />
           </button>
+          </div>
+
           <ul>
             <li>
               <NavLink to="/" className="link">

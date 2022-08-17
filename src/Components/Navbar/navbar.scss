@@ -12,10 +12,10 @@ button{
     display: none;
 }
 
-.hamburger{
-    position: relative;
-    margin-left: 90px;
-}
+// .hamburger{
+//     position: relative;
+//     margin-left: 90px;
+// }
 
 .nav-logo{
     position: relative;
@@ -26,23 +26,40 @@ button{
     }
 }
 .nav-link{
-    width: 250px;
+
+    width:100%;
     padding: 50px 0px;
-    position: absolute;  
-    top: -32px;
+    position: absolute;
     background-color:$dark-grey;
     align-items: center;
     transition: all 4s linear;
     transform-origin: left;
+    // z-index: 1;
 
     .link{
         color: $white;
     }
 
-    ul li{
-        display: block;
-        text-align: left;
+
+    ul {
+        padding-left: 0px;
+        li{
+            display: block;
+            text-align: center;
+            display: block;
+            margin: auto;
+            padding-top: 15px;
+
+            &:hover{
+                border-bottom: 2px solid $pink ;
+                width: fit-content;
+            }
+        }
     }
+    .active{
+        border-bottom: 2px solid $pink ;
+        width: fit-content;
+    } 
     
 }
   .nav-links{
@@ -96,6 +113,8 @@ button{
     }
   }
   .nav-icons{
+    position: relative;
+    // z-index: -1;
 
     ul{
         display: block;
@@ -243,5 +262,8 @@ button{
 @media (max-width: 375px){
 .navbar .nav-icons ul li .search{
     display: none;
+.navbar .nav-link{
+    margin-top: -10px;
+}
 }
 }
