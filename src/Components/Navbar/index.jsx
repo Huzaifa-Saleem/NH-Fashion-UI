@@ -64,7 +64,7 @@ const Navbar = () => {
         </button>
         <div className="nav-icons">
           <ul>
-            <li>
+            {/* <li>
               {isShown && <input type="text" placeholder="search" />}
               <span></span>
               <SearchIcon
@@ -72,7 +72,7 @@ const Navbar = () => {
                 sx={{ fontSize: 26, color: "black" }}
                 onClick={toggle}
               />
-            </li>
+            </li> */}
             <li>
               <Link to="/wishlist">
                 <Badge

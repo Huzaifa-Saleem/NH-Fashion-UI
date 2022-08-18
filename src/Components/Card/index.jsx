@@ -15,6 +15,7 @@ const Card = (props) => {
 
   const handleFav = (e) => {
     dispatch(addFavProduct({ ...products }));
+    window.alert("Product has been added to wishlist");
   };
   // if(fav._id.includes(products._id)){
   //   console.log('yes its working')

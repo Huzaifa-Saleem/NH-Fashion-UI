@@ -9,6 +9,7 @@ import ProductImage from "../Carousel/ProductImage";
 import SizeModal from "../SizeChart";
 import { addProduct } from "../../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import NotificationModal from "../NotificationModal/NotificationModal";
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
@@ -45,6 +46,7 @@ const ProductDetail = () => {
 
   const handleAddToCart = () => {
     dispatch(addProduct({ ...products, counter, size }));
+    window.alert("Product has been added to cart");
   };
 
   if (isLoading) {

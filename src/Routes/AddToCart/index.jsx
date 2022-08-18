@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Cart from "../../Components/Cart";
 import { Link } from "react-router-dom";
 import "../AddToCart/addToCart.scss";
@@ -6,7 +6,6 @@ import Button from "../../Components/Button";
 import { useSelector } from "react-redux";
 
 const AddToCart = () => {
-
   const cart = useSelector((state) => state.cart);
 
   return (
@@ -53,7 +52,7 @@ const AddToCart = () => {
               />
             ))}
             <div className="mt-3">
-              <Button title="CONTINUE SHIPPING" src="/products" />
+              <Button title="CONTINUE SHOPPING" src="/products" />
             </div>
           </div>
           <div className="col-md-4">
@@ -64,14 +63,10 @@ const AddToCart = () => {
                 <p className="fs-6 text-black">SubTotal</p>
                 <h5 className="fs-5 fw-bold">$ {cart.total}</h5>
               </div>
-              <div className="d-flex total justify-content-between ">
-                <p className="fs-6 text-black mb-2">Shipping</p>
-                <h5 className="fs-5 fw-bold mb-2">$ 100</h5>
-              </div>
               <hr />
               <div className="d-flex justify-content-between mt-4">
                 <p className="fs-6 text-black mb-0">Total</p>
-                <h5 className="fs-5 fw-bold mb-0">$ {cart.total + 100}</h5>
+                <h5 className="fs-5 fw-bold mb-0">$ {cart.total}</h5>
               </div>
               <div className="d-flex justify-content-center mt-4">
                 <Button title="PROCEED TO CHECKOUT" src="/checkout" />
