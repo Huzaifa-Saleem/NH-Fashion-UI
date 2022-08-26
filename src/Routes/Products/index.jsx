@@ -93,7 +93,7 @@ const Products = () => {
         return val.title.toLowerCase().includes(search.toLowerCase())
       })
       setFilteredPosts(item)
-    }
+    } 
     searchItems()
   },[search,posts])
 

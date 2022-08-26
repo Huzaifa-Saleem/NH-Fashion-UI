@@ -44,7 +44,6 @@ startTimer();
 
 return (
 <div>
-
       <Slider/>
 
   {/* --------------------- Collections section -------------------------- */}
@@ -55,14 +54,14 @@ return (
         <div className="col-xl-3 col-lg-1"></div>
         <div className='content cont-access1 col-xl-4 col-lg-6 col-sm-6 my-auto'>
           <h2 className=" fs-2 fw-bold position-relative">Clothing <br /> Collections 2022</h2>
-          <Link className="text-decoration-none position-relative" to='/'>SHOP NOW</Link>
+          <Link className="text-decoration-none position-relative" to='/products'>SHOP NOW</Link>
         </div>
         <div className='clothing-img col-xl-5 col-lg-5 col-sm-6'>
               <img className="img-fluid" src="/images/clothing.webp" alt="" />
           </div>
         <div className='content cont-access2 col-xl-4 col-lg-5 col-sm-6 my-3'>
           <h2 className=" fs-2 fw-bold position-relative">Clothing <br /> Collections 2022</h2>
-          <Link className="text-decoration-none position-relative" to='/'>SHOP NOW</Link>
+          <Link className="text-decoration-none position-relative" to='/products'>SHOP NOW</Link>
         </div>
         </div>
       </div>
@@ -74,7 +73,7 @@ return (
           </div>
           <div className='content col-sm-7 my-sm-auto ps-sm-5 ps-xl-2 ps-xl-0'>
           <h2 className="fs-2 fw-bold mt-3">Accessories</h2>
-          <Link className="text-decoration-none position-relative" to='/'>SHOP NOW</Link>
+          <Link className="text-decoration-none position-relative" to='/products'>SHOP NOW</Link>
           </div>
         </div>
       </div>
@@ -82,14 +81,14 @@ return (
         <div className="row">
         <div className='content shoes-cont1 col-xl-4 col-sm-6 my-auto ms-sm-5'>
           <h2 className="fs-2 fw-bold position-relative">Shoes Spring <br /> 2022</h2>
-          <Link className="text-decoration-none position-relative" to='/'>SHOP NOW</Link>
+          <Link className="text-decoration-none position-relative" to='/products'>SHOP NOW</Link>
           </div>
           <div className='shoes-img col-xl-8 col-sm-6'>
             <img className="img-fluid" src="/images/shoes.jpg" alt="" />
         </div>
         <div className='content shoes-cont2 col-xl-5 col-sm-6 my-auto pt-3'>
           <h2 className="fs-2 fw-bold position-relative">Shoes Spring <br /> 2022</h2>
-          <Link className="text-decoration-none position-relative" to='/'>SHOP NOW</Link>
+          <Link className="text-decoration-none position-relative" to='/products'>SHOP NOW</Link>
           </div>
         </div>
       </div>

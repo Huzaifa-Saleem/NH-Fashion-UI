@@ -9,7 +9,6 @@ import ProductImage from "../Carousel/ProductImage";
 import SizeModal from "../SizeChart";
 import { addProduct } from "../../redux/cartSlice";
 import { useDispatch } from "react-redux";
-import NotificationModal from "../NotificationModal/NotificationModal";
 
 const ProductDetail = () => {
   const dispatch = useDispatch();

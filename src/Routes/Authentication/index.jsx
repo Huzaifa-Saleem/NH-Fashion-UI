@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
 import {toast} from 'react-toastify'
-const Authentication = (props) => {
+const Authentication = (props, setUserName) => {
   const navigate = useNavigate();
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
@@ -44,8 +44,8 @@ const Authentication = (props) => {
     login(dispatch, { username: loginUsername, password: loginPassword });
   if(error){
     toast.error('Something Went Wrong')
-  }};
-  
+  }
+};
 
   if (user) {
     navigate("/");
